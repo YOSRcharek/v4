@@ -1,0 +1,42 @@
+.active{
+  font-weight: bold;
+}
+.col{
+  background: linear-gradient(to right,#ff1f8f,#d036db);
+}
+h1{
+  text-align: center;
+  color: black;
+}
+.navbar-brand{
+  font-size: 40px;
+  color: rgb(168, 204, 211);
+  font-weight: bold;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.dropdown-toggle{
+  color: black;
+  font-weight: bold;
+  text-decoration: none;
+  font-size:16px ;
+  font-family: 'Times New Roman', Times, serif;
+}
+.mx-auto{
+  color: black;
+  font-weight: bold;
+  text-decoration: none;
+  font-size:18px ;
+  font-family: 'Times New Roman', Times, serif;
+
+}
+.dropdown-menu{
+  color: black;
+  font-weight: bold;
+  text-decoration: none;
+  font-size:14px ;
+  font-family: 'Times New Roman', Times, serif;
+
+}
+
+
+

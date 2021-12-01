@@ -1,0 +1,21 @@
+
+<form   (ngSubmit)="onSubmitForm()" >
+    <div>
+        <label> Email address </label>
+        <input  class="form-control" type="text" name="Email"  formControlName="Email"> 
+        <div class="alert alert-danger" *ngIf="isValidEmail()">
+        Email address doit comporter un @ et . 
+        </div>     
+    </div>
+    <div>
+        <label>Password</label>
+        <input class="form-control" type="text" name="Password" formControlName="Password">
+         <div *ngIf="isValidPattern()" class="alert alert-warning">
+            Le mot de passe doit contenir des lettres  majuscule  et miniscule  
+            </div>
+    </div>
+
+    <input type="submit" value="Ajouter" disabled="">
+    <input type="button" value="Vider" (click)="onResetForm()">
+
+</form>

@@ -1,0 +1,74 @@
+
+<div class="container">
+    <div class="row"><h2>Tunis</h2>
+        <ng-container *ngFor="let t of hotelsTunis">
+           <div class="col-4">
+             <div class="card " style="width:400px">
+      
+               <img class="card-img-top" [src]="t.tableau_img[0]" alt="Card image">
+          
+                <div class="card-body">
+                <h4 class="card-title">{{t.libelle}}</h4>
+                  <p class="card-text">{{t.ville}}</p>
+                    <a [routerLink]="['/HotelsTunis',t.libelle]" class="btn btn-warning" >VOIR L'HÔTEL</a>
+                 </div>
+             </div>
+           </div>
+        </ng-container>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row"><h2>Hammamet</h2>
+        <ng-container *ngFor="let t of hotelsHammamet">
+           <div class="col-4">
+             <div class="card " style="width:400px">
+      
+               <img class="card-img-top" [src]="t.tableau_img[0]" alt="Card image">
+          
+                <div class="card-body">
+                <h4 class="card-title">{{t.libelle}}</h4>
+                  <p class="card-text">{{t.ville}}</p>
+                    <a [routerLink]="['/HotelsTunis',t.libelle]" class="btn btn-warning" >VOIR L'HÔTEL</a>
+                 </div>
+             </div>
+           </div>
+        </ng-container>
+    </div>
+</div>
+<div class="container">
+    <div class="row"><h2>Ain-Draham</h2>
+        <ng-container *ngFor="let t of hotelsHammamet">
+           <div class="col-4">
+             <div class="card " style="width:400px">
+      
+               <img class="card-img-top" [src]="t.tableau_img[0]" alt="Card image">
+          
+                <div class="card-body">
+                <h4 class="card-title">{{t.libelle}}</h4>
+                  <p class="card-text">{{t.ville}}</p>
+                    <a [routerLink]="['/HotelsTunis',t.libelle]" class="btn btn-warning" >VOIR L'HÔTEL</a>
+                 </div>
+             </div>
+           </div>
+        </ng-container>
+    </div>
+</div>
+<div class="container">
+    <div class="row"><h2>Djerba</h2>
+        <ng-container *ngFor="let t of hotelsHammamet">
+           <div class="col-4">
+             <div class="card " style="width:400px">
+      
+               <img class="card-img-top" [src]="t.tableau_img[0]" alt="Card image">
+          
+                <div class="card-body">
+                <h4 class="card-title">{{t.libelle}}</h4>
+                  <p class="card-text">{{t.ville}}</p>
+                    <a [routerLink]="['/HotelsTunis',t.libelle]" class="btn btn-warning" >VOIR L'HÔTEL</a>
+                 </div>
+             </div>
+           </div>
+        </ng-container>
+    </div>
+</div>

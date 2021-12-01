@@ -1,0 +1,38 @@
+
+  <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" routerLink="Profile">Profile</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="mynavbar">
+        <ul class="navbar-nav me-auto">
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/Consulter">Consulter</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/Ajouter">Ajouter</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/Modifier">Modifier</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/Supprimer">Supprimer</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/deconnecter">Se Déconnecter</a>
+          </li>
+        </ul>
+        <form class="d-flex" [formGroup]="Search" (ngSubmit)="onChercher(Search.controls.libelle.value)">
+          <input class="form-control me-2" type="text" placeholder="Search" formControlName="libelle" (ngModel)="nom">
+          <button class="btn btn-primary" type="button" (click)="onChercher(Search.controls.libelle.value)">Rechercher</button>
+        </form>
+      </div>
+    </div>
+  </nav>
+  {{hotel|json}}
+
+
+
+
+

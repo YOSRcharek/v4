@@ -1,0 +1,82 @@
+
+  h1{
+    text-align: center;
+    color: black;
+  }
+  .navbar-brand{
+    font-size: 40px;
+  
+    font-weight: bold;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  .dropdown-toggle{
+    color: black;
+    font-weight: bold;
+    text-decoration: none;
+    font-size:16px ;
+    font-family: 'Times New Roman', Times, serif;
+  }
+  .mx-auto{
+    color: black;
+    font-weight: bold;
+    text-decoration: none;
+    font-size:18px ;
+    font-family: 'Times New Roman', Times, serif;
+  
+  }
+  .dropdown-menu{
+    color: black;
+    font-weight: bold;
+    text-decoration: none;
+    font-size:14px ;
+    font-family: 'Times New Roman', Times, serif;
+  
+  }
+
+  input {
+  width: 100%;
+  padding: 0 5px;
+  height: 40px;
+  font-size: 16px;
+  border: none;
+  background: none;
+  outline: none;
+  }
+ 
+  
+  .txt input:focus ~ label,
+  .txt input:valid ~ label{
+  top: -5px;
+  color:rgb(168, 204, 211);
+  }
+  .txt input:focus ~ span::before,
+  .txt input:valid ~ span::before{
+  width: 100%;
+  }
+
+
+.bt2 {
+  background-color: #f1f1f1;
+  color: black;
+  font-size: 16px;
+  padding: 16px 30px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  text-align: center;
+}
+
+button:hover {
+  background-color: rgb(168, 204, 211);
+  color: black;
+}
+
+.barre{
+  background-color: rgb(168, 204, 211);
+   color: black;
+   width: 100%;
+  padding: 0 5px;
+  height: 40px;
+  font-size: 16px;
+
+}

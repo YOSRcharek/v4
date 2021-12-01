@@ -1,0 +1,57 @@
+
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <div class="card bg-light  ">
+                <div class="card-header text-center">
+                  <strong>
+                    {{HotelsTunis.libelle|titlecase}}
+                  </strong>  
+                </div>
+                <div class="card-body ">
+                 <div class=" row content text-center" >
+                  
+                 
+                        <div  class="col-6"*ngFor="let t of  HotelsTunis.tableau_img ;index as i" >
+                            <img [src]="HotelsTunis.tableau_img[i]"  style="width:100%; height: 90%;">
+                        </div>
+                      </div>
+
+
+                  <br>
+
+                 <strong> <div class="tit">Ville : </div>{{HotelsTunis.ville |titlecase}} <br>
+                  <div class="tit">Catégorie :</div>
+                    {{HotelsTunis.type}} <br>
+                    
+                    <div class="tit"> Les chambres:</div>
+                      
+                       <ul *ngFor="let t of  HotelsTunis.typeCh ;index as j">
+                        <li> {{HotelsTunis.typeCh[j]}}</li>
+                       </ul>
+                      
+                       <div class="tit">Les equipements:</div>
+                       
+                         <table *ngFor="let t of  HotelsTunis.service ;index as k">
+                           <tr >
+                            <td> <img [src]="HotelsTunis.servicePH[k]" class="icone">  </td>
+                            <td>   {{HotelsTunis.service[k]}}</td>
+                           </tr>
+
+                         </table>
+                         <div class="tit">Prix: <br><span class="badge rounded-pill bg-secondary">  {{HotelsTunis.prix |number: '.3'}} DT</span><br></div>
+                      <div class="tit"> Avis: <br>{{HotelsTunis.avis}}/20</div> 
+                  </strong>
+                </div>
+                <div class="card-footer text-center">
+                              
+                   
+                  <button class="btn-lg btn-info" routerLink="/reserve">Réserver</button>
+                  <button class="btn-lg btn-info" (click)="recommander(this.HotelsTunis.avis) ">Recommander</button>
+
+                </div>
+              </div>
+        </div>
+    </div>
+</div>
+     <button class="btn btn-dark" routerLink="/Tunis" >Retour</button>        
