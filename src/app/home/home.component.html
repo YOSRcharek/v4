@@ -65,8 +65,10 @@
   <div class="col-md-2">
   <div class="form-group">
     <span class="form-label">Adulte</span>
-    <input class="form-control" type="number" required="" placeholder="Nombre Adultes">
-  
+    <input class="form-control" type="number" required=""  name="NombreA" placeholder="Nombre Adultes">
+    <div *ngIf="NombreA.invalid && NombreA.touched" class="alert alert-danger">
+      Le nombres d'adulte est obligatoire
+      </div>
  
   
   </div>
@@ -74,7 +76,10 @@
   <div class="col-md-2">
   <div class="form-group">
     <span class="form-label">Enfants</span>
-    <input class="form-control" type="number" required="" placeholder="Nombre Enfants">
+    <input class="form-control" type="number" required="" name="NombreE" placeholder="Nombre Enfants">
+    <div *ngIf="NombreE.invalid && NombreE.touched" class="alert alert-danger">
+      Le nombres des enfants est obligatoire
+      </div>
   </div>
 </div>
   
@@ -82,21 +87,26 @@
   <div class="form-group"> 
 
     <span class="form-label">Date depart</span>
-    <input class="form-control" type="date" required="">
+    <input class="form-control" type="date" required="" name="DateDep">
+    <div *ngIf="DateDep.invalid && DateDep.touched" class="alert alert-danger">
+      La date de départ est obligatoire
+      </div> 
     
   </div>
   </div>
   <div class="col-md-2">
   <div class="form-group">
     <span class="form-label">Date Arriver</span>
-  <input class="form-control" type="date" required="">
-  
+  <input class="form-control" type="date" required="" name="DateAr">
+  <div *ngIf="DateAr.invalid && DateAr.touched" class="alert alert-danger">
+    La date d'arriver est obligatoire
+    </div>  
   </div>
   </div>
   <div class="col-md-2">
   <div class="form-btn">
    
-  <button class="submit-btn" onclick="dispo()">Voir les disponibilités</button>
+  <button class="submit-btn" [disabled]="HotelForm.invalid" onclick="dispo()">Voir les disponibilités</button>
     
   </div>
   </div>

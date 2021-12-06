@@ -1,8 +1,10 @@
-import { Component, OnInit ,Input} from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { Image } from 'src/app/image';
+import { Sejour } from 'src/app/models/sejour';
 import { HotelsService } from '../service/hotel.service';
-import { Sejour } from '../models/sejour';
-import { Image } from '../image';
+import { Reservation } from 'src/app/reservation';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 @Component({
   selector: 'app-detail-ain',
   templateUrl: './detail-ain.component.html',
@@ -11,11 +13,47 @@ import { Image } from '../image';
 export class DetailAinComponent implements OnInit {
   @Input() img :Image= new Image();
   HotelsAinDraham:Sejour;
-  constructor(  private activatedRoute:ActivatedRoute,private hotelsService:HotelsService) { }
+  res:Reservation;
+  
+    Ajouter(){
+     this.hotelsService.ajouter(this.res);
+    }
+   HotelForm:FormGroup;
+  constructor(  private activatedRoute:ActivatedRoute,private hotelsService:HotelsService, private fb:FormBuilder) { }
 
   ngOnInit(): void {
     let libelle = this.activatedRoute.snapshot.params['libelle'];
     this.HotelsAinDraham=this.hotelsService.getHotelByLibHA(libelle);
-  }
+    this.HotelForm=this.fb.group({
+      NombreCh:['',Validators.required],
+      NombreA:['',Validators.required],
+      NombreE:['',Validators.required],
+      DateDep:['',Validators.required],
+      DateAr:['',Validators.required],
+      PrixJ:['',Validators.required]
 
+
+    });
+}
+reserver(){
+  console.log(this.HotelForm.value);
+}
+get NombreCh(){
+  return this.HotelForm.controls.NombreCh;
+  }
+get NombreA(){
+    return this.HotelForm.controls.NombreA;
+  }
+get NombreE(){
+      return this.HotelForm.controls.NombreE;
+  }
+get DateDep(){
+  return this.HotelForm.controls.DateDep;
+ }
+ get DateAr(){
+  return this.HotelForm.controls.DateAr;
+  } 
+  get prixJ(){
+    return this.HotelForm.controls.prixJ;
+    }  
 }

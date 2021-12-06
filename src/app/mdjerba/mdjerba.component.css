@@ -1,0 +1,20 @@
+a{
+    color:white;
+}
+img{height: 200px;}
+.submit-btn
+{
+  color: #fff;
+  background-color: #00327b;
+ 
+   
+  width: 100%;
+  text-align: center;
+    border: 1px solid transparent;
+    padding:8px 8px;
+    font-size: 12px;
+    line-height: 3;
+    border-radius: 10px;
+    
+    text-transform: uppercase;
+  }

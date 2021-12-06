@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { MService } from '../service/m.service';
+import { HotelsService } from '../service/hotel.service';
 import { Sejour } from '../models/sejour';
 @Component({
   selector: 'app-mtunis',
@@ -7,12 +7,12 @@ import { Sejour } from '../models/sejour';
   styleUrls: ['./mtunis.component.css']
 })
 export class MtunisComponent implements OnInit {
-  constructor(private mService:MService) { }
+  constructor(private hotelsService:HotelsService) { }
   MTunis:Sejour[]=[];
   
 
   ngOnInit(): void {
-    this.MTunis=this.mService.mtunis();
+    this.MTunis=this.hotelsService.Mtunis();
   }
   
 }

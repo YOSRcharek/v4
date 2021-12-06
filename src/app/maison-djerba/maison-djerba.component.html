@@ -1,1 +1,114 @@
-<p>maison-djerba works!</p>
+<div class="container">
+    <div class="row">
+        <div class="col-md-8">
+            <div class="card bg-light  ">
+                <div class="card-header text-center">
+                  <strong>
+                    {{MaisonTunis.libelle|titlecase}}
+                  </strong>  
+                </div>
+                <div class="card-body ">
+                 
+            
+                 <div *ngFor="let t of  MaisonTunis.tableau_img">
+                   <app-image [img]="t"></app-image>
+                 </div>
+                        
+  
+                 <strong> <div class="tit">Ville : </div>{{MaisonTunis.ville |titlecase}} <br>
+                  <div class="tit">Catégorie :</div>
+                    {{MaisonTunis.type}} <br>
+                    
+                    <div class="tit"> Les chambres:</div>
+                      
+                       <ul *ngFor="let t of MaisonTunis.typeCh ;index as j">
+                        <li> {{MaisonTunis.typeCh[j]}}</li>
+                       </ul>
+                      
+                       <div class="tit">Les equipements:</div>
+                       
+                         <table *ngFor="let t of  MaisonTunis.service ;index as k">
+                           <tr >
+                            <td> <img [src]="MaisonTunis.servicePH[k]" class="icone">  </td>
+                            <td>   {{MaisonTunis.service[k]}}</td>
+                           </tr>
+  
+                         </table>
+                         <div class="tit">Prix: <br><span class="badge rounded-pill bg-secondary">  {{MaisonTunis.prix |number: '.3'}} DT</span><br></div>
+                      <div class="tit"> Avis: <br>{{MaisonTunis.avis}}/20</div> 
+                  </strong>
+                </div>
+                <div class="card-footer text-center">
+                  <button class="btn-lg btn-info" >Recommander</button>
+                </div>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="container my d-grid gap">
+                  <div class="section">
+                    <div class="container">
+                    <div class="row">
+                    <div class="booking-form">
+                    <form [formGroup]="HotelForm" (ngSubmit)="reserver()">
+                    <div class="col-md-8">
+                    <div class="form-group">
+                      <span class="form-label">chambres</span>
+                      <input class="form-control" type="number"  placeholder="Nombre chambres" formControlName="NombreCh">
+                      <div *ngIf="NombreCh.invalid && NombreCh.touched" class="alert alert-danger">
+                        Le nombres de chambres est obligatoire
+                      </div>
+                    <div class="form-group">
+                      <span class="form-label">Adulte</span>
+                      <input class="form-control" type="number" placeholder="Nombre Adultes"formControlName="NombreA">
+                      <div *ngIf="NombreA.invalid && NombreA.touched" class="alert alert-danger">
+                        Le nombres d' adulte est obligatoire
+                        </div>
+                    </div>
+                    <div class="form-group">
+                      <span class="form-label">Enfants</span>
+                      <input class="form-control" type="number" placeholder="Nombre Enfants" formControlName="NombreE">
+                      <div *ngIf="NombreE.invalid && NombreE.touched" class="alert alert-danger">
+                        Le nombres des enfants est obligatoire
+                        </div>
+                    </div>
+                    <div class="form-group"> 
+                      <span class="form-label">Date depart</span>
+                      <input class="form-control"  type="date" formControlName="DateDep">
+                      <div *ngIf="DateDep.invalid && DateDep.touched" class="alert alert-danger">
+                        La date de départ est obligatoire
+                        </div> 
+                    </div>
+        
+                     <div class="form-group">
+                      <span class="form-label">Date Arriver</span>
+                    <input class="form-control"  type="date" formControlName="DateAr">
+                    <div *ngIf="DateAr.invalid && DateAr.touched" class="alert alert-danger">
+                      La date d'arriver est obligatoire
+                      </div>  
+                  </div>
+                    <div class="form-btn ">
+                     
+                      <input type="submit" class="submit-btn" [disabled]="HotelForm.invalid" (click)="Ajouter()" value="Payer" routerLink="/payer">
+                        
+                      </div>
+                    </div>
+                   
+                    
+                   
+                    </div>
+                  
+                  
+                    </form>
+                    
+                    </div>
+                    </div>
+                    </div>
+                  </div>
+                  </div>
+                  
+            </div>
+            
+          </div><button class="btn btn-dark" routerLink="/MaisonDjerba" >Retour</button>
+        
+        </div>
+        

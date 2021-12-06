@@ -83,7 +83,7 @@ const routes: Routes = [
   {path:'HotelsAinDrahim/:libelle', component:DetailAinComponent},
   {path:'HotelsTozeur/:libelle', component:DetailTozComponent},
   {path:'HotelsDjerba/:libelle', component:DetailDjerComponent},
- { path:'',redirectTo:'Best-Tunisia-Travel',pathMatch:'full'},
+ { path:'',redirectTo:'home',pathMatch:'full'},
    {path:'**',component:ErreurComponent}
   
 ];
