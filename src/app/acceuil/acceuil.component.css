@@ -1,0 +1,10 @@
+img{width: 60px;height: 60px;}
+#menuGauche {
+    
+    float : left ;
+    width : 60% ;
+  }
+#menuDroite {
+    text-align : right ;
+    float: right;
+  }

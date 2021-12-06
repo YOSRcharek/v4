@@ -1,5 +1,5 @@
-
-  <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+<br><br><br><br>
+  <nav class="navbar navbar-expand-sm navbar-dark bg-dark fixed-top">
     <div class="container-fluid">
       <a class="navbar-brand" routerLink="Profile">Profile</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
@@ -8,29 +8,51 @@
       <div class="collapse navbar-collapse" id="mynavbar">
         <ul class="navbar-nav me-auto">
           <li class="nav-item">
-            <a class="nav-link" routerLink="/Consulter">Consulter</a>
+            <a class="nav-link" routerLink="/Best-Tunisia-Travel/backoffice/Consulter">Consulter</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" routerLink="/Ajouter">Ajouter</a>
+            <a class="nav-link" routerLink="/Best-Tunisia-Travel/backoffice/Ajouter">Ajouter</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" routerLink="/Modifier">Modifier</a>
+            <a class="nav-link" routerLink="/Best-Tunisia-Travel/backoffice/Modifier">Modifier</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" routerLink="/Supprimer">Supprimer</a>
+            <a class="nav-link" routerLink="/Best-Tunisia-Travel/backoffice/Supprimer">Supprimer</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" routerLink="/deconnecter">Se Déconnecter</a>
+            <a class="nav-link" routerLink="/Best-Tunisia-Travel">Se Déconnecter</a>
           </li>
         </ul>
         <form class="d-flex" [formGroup]="Search" (ngSubmit)="onChercher(Search.controls.libelle.value)">
-          <input class="form-control me-2" type="text" placeholder="Search" formControlName="libelle" (ngModel)="nom">
+          <input class="form-control me-2" type="text" placeholder="Rechercher" formControlName="libelle" (ngModel)="nom">
           <button class="btn btn-primary" type="button" (click)="onChercher(Search.controls.libelle.value)">Rechercher</button>
         </form>
       </div>
     </div>
   </nav>
-  {{hotel|json}}
+  <div>
+    <div class="container">
+        <div class="row">
+            <ng-container *ngFor="let t of hotel">
+               <div class="col-4">
+                 <div class="card " style="width:400px;height: 400px;">
+          
+                   <img class="card-img-top" [src]="t.tableau_img[0]" alt="Card image">
+              
+                    <div class="card-body">
+                      <h3 class="card-title">{{t.libelle|titlecase}}</h3> <span *ngFor="let n of etoile(t.nombre_etoile)"><i class="fas fa-star" style="color:gold;"></i></span><p></p>
+                      <h5 class="card-text"><i class="fas fa-map-marker" style="color:paleturquoise;"></i> {{t.ville|titlecase}}</h5>
+                      <p class="card-text"><i class="fas fa-coins" style="color: gold;"></i> Tarif : {{t.prix}}</p>
+                      <p class="card-text" *ngIf="t.promotion">
+                        <i class="fas fa-check-circle" style="color: greenyellow;"></i> Tarif Avec Promotion : {{promo(t.prix,t.pourcentage)}}</p>
+                      
+                     </div>
+                 </div>
+               </div>
+            </ng-container>
+        </div>
+    </div>
+</div>
 
 
 

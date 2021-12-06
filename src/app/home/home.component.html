@@ -1,7 +1,7 @@
-<!-- Banner Image  -->
-<div class="banner-image w-380 vh-99 d-flex justify-content-center align-items-center">
-    <div class="content text-center">
-      <div id="demo" class="carousel slide" data-bs-ride="carousel">
+
+ <div class="banner-image w-55 vh-40 justify-content-center align-items-center">
+    
+      <div id="demo" class="carousel slide" data-bs-ride="carousel" class='img'>
 
         <!-- Indicators/dots -->
         <div class="carousel-indicators">
@@ -13,13 +13,13 @@
         <!-- The slideshow/carousel -->
         <div class="carousel-inner">
           <div class="carousel-item active">
-            <img src="assets/passport.2png.PNG"  style="width:100%;" alt="" >
+            <img src="assets/passport.2png.PNG"  style="width:100%; height: 600px;"  alt="" >
           </div>
           <div class="carousel-item">
-            <img src="assets/Alhambra Thalasso promo.PNG" width="991px"  style="width:100%;" >
+            <img src="assets/Alhambra Thalasso promo.PNG" style="width:100%; height: 600px;" >
           </div>
           <div class="carousel-item">
-            <img src="assets/Laico TunisPromo_1.jpg" width="991px"  style="width:100%;" >
+            <img src="assets/Laico TunisPromo_1.jpg"  style="width:100%; height: 600px;">
           </div>
         </div>
         
@@ -32,42 +32,137 @@
         </button>
       </div>
       
-    </div>
+    
+  </div> 
+
+
+  <div class="container my d-grid gap">
+<div class="section">
+  <div class="container">
+  <div class="row">
+  <div class="booking-form">
+  <form>
+  <div class="col-md-2">
+  <div class="form-group">
+   
+        <img src="assets/position.PNG" height="18px" width="18px"><span class="form-label">Destination</span> 
+      <select class="form-control">
+       <!--top destination--> 
+        <option><a href="#"> <img src="assets/position.PNG" height="18px" width="18px"> Korba,Tunisie</a></option>
+        <option><a href="#"> <img src="assets/position.PNG" height="18px" width="18px"> Hammamet,Tunisie</a></option>
+        <option><a href="#"> <img src="assets/position.PNG" height="18px" width="18px"> Tunis,Tunisie</a></option>
+        <option><a href="#"> <img src="assets/position.PNG" height="18px" width="18px"> Carthage,Tunisie</a></option>
+        <option><a href="#"> <img src="assets/position.PNG" height="18px" width="18px"> Monastir,Tunisie</a></option>
+        <option><a href="#"> <img src="assets/position.PNG" height="18px" width="18px"> Djerba,Tunisie</a></option>
+        <option><a href="#"> <img src="assets/position.PNG" height="18px" width="18px"> Mahdia,Tunisie</a></option>
+        <option><a href="#"> <img src="assets/position.PNG" height="18px" width="18px"> Tozeur,Tunisie</a></option>
+      </select>
+     <span></span>
   </div>
-<p></p>
-<br>
+  
+  
+  </div>
+  <div class="col-md-2">
+  <div class="form-group">
+    <span class="form-label">Adulte</span>
+    <input class="form-control" type="number" required="" placeholder="Nombre Adultes">
+  
+ 
+  
+  </div>
+  </div>
+  <div class="col-md-2">
+  <div class="form-group">
+    <span class="form-label">Enfants</span>
+    <input class="form-control" type="number" required="" placeholder="Nombre Enfants">
+  </div>
+</div>
+  
+  <div class="col-md-2">
+  <div class="form-group"> 
 
-
-
-  <!-- Main Content Area -->
-  <div class="container my-5 d-grid gap-5">
-    <div class="p-5 border">
-      <h1>Nos meilleurs Hotels en Tunisie</h1>
-
-      <div class="container">
-        <div class="row">
-            <ng-container *ngFor="let t of HotelsTunis">
-               <div class="col-4">
-                 <div class="card text-center" style="width:400px">
-          
-                   <img class="card-img-top" [src]="t.tableau_img[0]" alt="Card image">
-              
-                    <div class="card-body">
-                    <h4 class="card-title">{{t.libelle}}</h4>
-                      <p class="card-text">{{t.ville}}</p>
-                        <a href="#" class="btn btn-warning">VOIR L'HÔTEL</a>
-                     
-                     <div class="card-footer">
-                      <button  class="btn btn-primary text-rigth" >recommander</button></div>
-                  </div>
-                 </div>
-               </div>
-            </ng-container>
-        </div>
-    </div>
-    </div>
+    <span class="form-label">Date depart</span>
+    <input class="form-control" type="date" required="">
     
   </div>
+  </div>
+  <div class="col-md-2">
+  <div class="form-group">
+    <span class="form-label">Date Arriver</span>
+  <input class="form-control" type="date" required="">
+  
+  </div>
+  </div>
+  <div class="col-md-2">
+  <div class="form-btn">
+   
+  <button class="submit-btn" onclick="dispo()">Voir les disponibilités</button>
+    
+  </div>
+  </div>
+  </form>
+  
+  </div>
+  </div>
+  </div>
+</div>
+</div>
+
+<div class="container my-4 d-grid gap-4">
+  <div class="row">
+      <ng-container *ngFor="let t of HotelsTunis">
+         <div class="col-4">
+           <div class="card " style="width:400px">
+    
+             <img class="card-img-top" [src]="t.pic" alt="Card image">
+        
+              <div class="card-body">
+              <h4 class="card-title">{{t.libelle}}</h4>
+                <p class="card-text">{{t.ville}}</p>
+                  <a [routerLink]="['/HotelsTunis',t.libelle]" class="btn btn-warning submit-btn" >VOIR L'HÔTEL</a>
+               </div>
+           </div>
+         </div>
+      </ng-container>
+  </div>
+</div>
+
+
+ 
+  
+
+<div>
+  <div class="container my-5 d-grid gap-5">
+    <div class="text">Je souhaite recevoir des offres par email</div>              
+    <form >
+      <div class="form-group">
+           
+            <div class="input-group mb-3"> 
+              <label class="input-group-text">
+                <input type="email"  class="form-control" placeholder="Votre adresse mail"  ></label>
+               <button class="btn-lg "  type="submit">S'inscrire</button>
+               
+          </div>
+      </div>
+      <div class="col-md-4 ">
+        <div class="text ">Suivez-nous</div>              
+        <ul class="ml-auto list-inline mb-0">
+          <li class="list-inline-item"><a target="_blank" href="https://www.facebook.com" rel="nofollow"><img src="assets/facebook.png" alt="facebook"></a></li>
+          <li class="list-inline-item"><a target="_blank" href="https://twitter.com" rel="nofollow"><img src="assets/twitter.png" alt="twitter"></a></li>   
+          <li class="list-inline-item"><a target="_blank" href="https://www.instagram.com" rel="nofollow"><img src="assets/instagram.png" alt="instagram"></a></li>  
+          <li class="list-inline-item"><a target="_blank" href="https://fr.linkedin.com/" rel="nofollow"><img src="assets/linkedin.png" alt="linkedin"></a></li>   
+          <li class="list-inline-item"><a target="_blank" href="https://www.youtube.com/" rel="nofollow"><img src="assets/youtube.png" alt="youtube"></a></li>   
+        </ul>
+      </div>
+      <div class="">
+      <div class="text">Paiement sécurisé</div>          
+      <img src="assets/payer.png" >
+    </div>
+    </form>
+    
+  </div>
+</div>
+
  <div>
    <div class="container mt-3">
     <form [formGroup]="Utilisateur" (ngSubmit)="onSubmit()">

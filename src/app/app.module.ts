@@ -37,6 +37,17 @@ import { MDjerbaComponent } from './mdjerba/mdjerba.component';
 import { MTozeurComponent } from './mtozeur/mtozeur.component';
 import { MAinDrahimComponent } from './main-drahim/main-drahim.component';
 import { PrompHotelComponent } from './promp-hotel/promp-hotel.component';
+import { ImageComponent } from './image/image.component';
+import { MaisonTunisComponent } from './maison-tunis/maison-tunis.component';
+import { MaisonTozeurComponent } from './maison-tozeur/maison-tozeur.component';
+import { MaisonDjerbaComponent } from './maison-djerba/maison-djerba.component';
+import { MaisonAinDrahimComponent } from './maison-ain-drahim/maison-ain-drahim.component';
+import { MaisonHammametComponent } from './maison-hammamet/maison-hammamet.component';
+import { BarreComponent } from './barre/barre.component';
+import { PayerComponent } from './payer/payer.component';
+import { AcceuilComponent } from './acceuil/acceuil.component';
+import { AdministrateurComponent } from './administrateur/administrateur.component';
+import { UtilisateurComponent } from './utilisateur/utilisateur.component';
 
 @NgModule({
   declarations: [
@@ -74,7 +85,18 @@ import { PrompHotelComponent } from './promp-hotel/promp-hotel.component';
     MDjerbaComponent,
     MTozeurComponent,
     MAinDrahimComponent,
-    PrompHotelComponent
+    PrompHotelComponent,
+    ImageComponent,
+    MaisonTunisComponent,
+    MaisonTozeurComponent,
+    MaisonDjerbaComponent,
+    MaisonAinDrahimComponent,
+    MaisonHammametComponent,
+    BarreComponent,
+    PayerComponent,
+    AcceuilComponent,
+    AdministrateurComponent,
+    UtilisateurComponent
   ],
   imports: [
     BrowserModule,

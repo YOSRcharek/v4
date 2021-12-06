@@ -1,17 +1,50 @@
 
-<div class="container" >
- 
-    <div class="card text-center" style="width:18rem">
-    
-    <div class="card-header" >
-        <strong>{{libelle}} </strong> </div>
-        <div class="card-body" >
-       
-   
-    <strong class="badge rounded-pill bg-secondary">prix:DT</strong> 
-    <div class="card-footer">
-        <input type="button" value="return" [routerLink]="['/home']" >
-      </div>
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <div class="card bg-light  ">
+                <div class="card-header text-center">
+                  <strong>
+                    {{HotelsAinDraham.libelle|titlecase}}
+                  </strong>  
+                </div>
+                <div class="card-body ">
+                  <div *ngFor="let t of  HotelsAinDraham.tableau_img">
+                    <app-image [img]="t"></app-image>
+                  </div>
 
-</div> 
-</div> 
+                 <strong> <div class="tit">Ville : </div>{{HotelsAinDraham.ville |titlecase}} <br>
+                  <div class="tit">Catégorie :</div>
+                    {{HotelsAinDraham.type}} <br>
+                    
+                    <div class="tit"> Les chambres:</div>
+                      
+                       <ul *ngFor="let t of  HotelsAinDraham.typeCh ;index as j">
+                        <li> {{HotelsAinDraham.typeCh[j]}}</li>
+                       </ul>
+                      
+                       <div class="tit">Les equipements:</div>
+                       
+                         <table *ngFor="let t of  HotelsAinDraham.service ;index as k">
+                           <tr >
+                            <td> <img [src]="HotelsAinDraham.servicePH[k]" class="icone">  </td>
+                            <td>   {{HotelsAinDraham.service[k]}}</td>
+                           </tr>
+
+                         </table>
+                         <div class="tit">Prix: <br><span class="badge rounded-pill bg-secondary">  {{HotelsAinDraham.prix |number: '.3'}} DT</span><br></div>
+                      <div class="tit"> Avis: <br>{{HotelsAinDraham.avis}}/20</div> 
+                  </strong>
+                </div>
+                <div class="card-footer text-center">
+                              
+                   
+                  <button class="btn-lg btn-info" routerLink="/reserve">Réserver</button>
+                  <button class="btn-lg btn-info"  >Recommander</button>
+
+                </div>
+              </div>
+        </div>
+    </div>
+</div>
+     <button class="btn btn-dark" routerLink="/Ain-Draham" >Retour</button>        

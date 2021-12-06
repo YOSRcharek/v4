@@ -1,0 +1,127 @@
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <div class="card bg-light  ">
+                <div class="card-header text-center">
+                  <strong>
+                  
+                    
+                    {{MaisonTunis.libelle|titlecase}}
+                    
+                  </strong>  
+                </div>
+                <div class="card-body ">
+                 
+                  
+                 <div *ngFor="let t of  MaisonTunis.tableau_img">
+                   <app-image [img]="t"></app-image>
+                 </div>
+                        
+  
+                 <strong> <div class="tit">Ville : </div>{{MaisonTunis.ville |titlecase}} <br>
+                  <div class="tit">Catégorie :</div>
+                    {{MaisonTunis.type}} <br>
+                    
+                    <div class="tit"> Les chambres:</div>
+                      
+                       <ul *ngFor="let t of MaisonTunis.typeCh ;index as j">
+                        <li> {{MaisonTunis.typeCh[j]}}</li>
+                       </ul>
+                      
+                       <div class="tit">Les equipements:</div>
+                       
+                         <table *ngFor="let t of  MaisonTunis.service ;index as k">
+                           <tr >
+                            <td> <img [src]="MaisonTunis.servicePH[k]" class="icone">  </td>
+                            <td>   {{MaisonTunis.service[k]}}</td>
+                           </tr>
+  
+                         </table>
+                         <div class="tit">Prix: <br><span class="badge rounded-pill bg-secondary">  {{MaisonTunis.prix |number: '.3'}} DT</span><br></div>
+                      <div class="tit"> Avis: <br>{{MaisonTunis.avis}}/20</div> 
+                  </strong>
+                </div>
+                <div class="card-footer text-center">
+                              
+                   
+                  <button class="btn-lg btn-info" routerLink="/reserve">Réserver</button>
+                  <button class="btn-lg btn-info" >Recommander</button>
+  
+                </div>
+              </div>
+        </div>
+    </div>
+  </div>
+     <button class="btn btn-dark" routerLink="/Mtunis" >Retour</button>
+     
+  <div class="container my d-grid gap">
+    <div class="section">
+      <div class="container">
+      <div class="row">
+      <div class="booking-form">
+      <form>
+      <div class="col-md-2">
+      <div class="form-group">
+       
+            <img src="assets/position.PNG" height="18px" width="18px"><span class="form-label">Destination</span> 
+          <select class="form-control">
+           <!--top destination--> 
+            <option><a href="#"> <img src="assets/position.PNG" height="18px" width="18px"> Korba,Tunisie</a></option>
+            <option><a href="#"> <img src="assets/position.PNG" height="18px" width="18px"> Hammamet,Tunisie</a></option>
+            <option><a href="#"> <img src="assets/position.PNG" height="18px" width="18px"> Tunis,Tunisie</a></option>
+            <option><a href="#"> <img src="assets/position.PNG" height="18px" width="18px"> Carthage,Tunisie</a></option>
+            <option><a href="#"> <img src="assets/position.PNG" height="18px" width="18px"> Monastir,Tunisie</a></option>
+            <option><a href="#"> <img src="assets/position.PNG" height="18px" width="18px"> Djerba,Tunisie</a></option>
+            <option><a href="#"> <img src="assets/position.PNG" height="18px" width="18px"> Mahdia,Tunisie</a></option>
+            <option><a href="#"> <img src="assets/position.PNG" height="18px" width="18px"> Tozeur,Tunisie</a></option>
+          </select>
+         <span></span>
+      </div>
+      
+      
+      </div>
+      <div class="col-md-2">
+      <div class="form-group">
+        <span class="form-label">Adulte</span>
+        <input class="form-control" type="number" required="" placeholder="Nombre Adultes">
+      
+     
+      
+      </div>
+      </div>
+      <div class="col-md-2">
+      <div class="form-group">
+        <span class="form-label">Enfants</span>
+        <input class="form-control" type="number" required="" placeholder="Nombre Enfants">
+      </div>
+    </div>
+      
+      <div class="col-md-2">
+      <div class="form-group"> 
+    
+        <span class="form-label">Date depart</span>
+        <input class="form-control" type="date" required="">
+        
+      </div>
+      </div>
+      <div class="col-md-2">
+      <div class="form-group">
+        <span class="form-label">Date Arriver</span>
+      <input class="form-control" type="date" required="">
+      
+      </div>
+      </div>
+      <div class="col-md-2">
+      <div class="form-btn">
+       
+      <button class="submit-btn" onclick="dispo()">Voir les disponibilités</button>
+        
+      </div>
+      </div>
+      </form>
+      
+      </div>
+      </div>
+      </div>
+    </div>
+    </div>

@@ -4,12 +4,12 @@
            <div class="col-4">
              <div class="card " style="width:400px">
       
-               <img class="card-img-top" [src]="t.tableau_img[0]" alt="Card image">
+               <img class="card-img-top" [src]="t.pic" alt="Card image">
           
                 <div class="card-body">
                 <h4 class="card-title">{{t.libelle}}</h4>
                   <p class="card-text">{{t.ville}}</p>
-                    <a [routerLink]="['/HotelsDjerba',t.libelle]" class="btn btn-warning">VOIR L'HÔTEL</a>
+                    <a [routerLink]="['/HotelsDjerba',t.libelle]" class="btn btn-warning submit-btn">VOIR L'HÔTEL</a>
                  </div>
              </div>
            </div>

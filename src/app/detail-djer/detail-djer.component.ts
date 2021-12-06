@@ -1,7 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit ,Input} from '@angular/core';
 import { Sejour } from '../models/sejour';
 import { ActivatedRoute } from '@angular/router';
 import { HotelsService } from '../service/hotel.service';
+import { Image } from '../image';
 @Component({
   selector: 'app-detail-djer',
   templateUrl: './detail-djer.component.html',
@@ -9,13 +10,15 @@ import { HotelsService } from '../service/hotel.service';
 })
 export class DetailDjerComponent implements OnInit {
 
-  libelle=0;
-  HotelsDjerba:Sejour[] = [];
+  @Input() img :Image= new Image();
+  HotelsDjerba:Sejour;
   constructor(  private activatedRoute:ActivatedRoute,private hotelsService:HotelsService) { }
 
   ngOnInit(): void {
-    this.libelle = this.activatedRoute.snapshot.params['libelle'];
-    this.HotelsDjerba=this.hotelsService.HoteleDjerba();
+   let libelle = this.activatedRoute.snapshot.params['libelle'];
+    this.HotelsDjerba=this.hotelsService.getHotelByLibD(libelle);
+   
   }
+  
 
 }

@@ -1,7 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit ,Input} from '@angular/core';
 import { Sejour } from '../models/sejour';
 import { ActivatedRoute } from '@angular/router';
 import { HotelsService } from '../service/hotel.service';
+import { Image } from '../image';
 
 @Component({
   selector: 'app-detail-toz',
@@ -10,13 +11,14 @@ import { HotelsService } from '../service/hotel.service';
 })
 export class DetailTozComponent implements OnInit {
 
-  libelle=0;
-  HotelsTozeur:Sejour[] = [];
+  @Input() img :Image= new Image();
+  HotelsTozeur:Sejour;
+  
   constructor(  private activatedRoute:ActivatedRoute,private hotelsService:HotelsService) { }
 
   ngOnInit(): void {
-    this.libelle = this.activatedRoute.snapshot.params['libelle'];
-    this.HotelsTozeur=this.hotelsService.Hotelstozeur();
+   let libelle = this.activatedRoute.snapshot.params['libelle'];
+    this.HotelsTozeur=this.hotelsService.getHotelByLibT(libelle);
   }
 
 }

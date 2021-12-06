@@ -1,0 +1,35 @@
+<div class="image-container set-full-height" id="id" class="c">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-8 col-sm-offset-3">
+                <div class="wizard-container">
+                    <br><br>
+                    <div class="card wizard-card" style="height: 200px;width:600px; background-color: transparent;">
+                            <div class="wizard-header">
+                                <h3>
+                                   <b style="text-align: center; color:lightpink;">Connecter : </b>      <br>
+                                   <small>Taper votre identifiant et Mot de passe</small>
+                                </h3>
+                            </div>
+                                <div class="container mt-3">
+                                    <form [formGroup]="Utilisateur" >
+                                      <!-- <div class="barre"><label>Back Office</label></div> -->
+                                      <div class="input-group mb-3"> 
+                                        <label class="input-group-text" style="background-color:lavender;">  Identifiant :  
+                                          <input type="text" placeholder="Identifiant" formControlName="username" style="width: 500px;"></label>
+                                        
+                                      </div>
+                                      <div class="input-group mb-3"> 
+                                        <label class="input-group-text" style="background-color:lavender;">  Mot de passe :  
+                                          <input type="password" placeholder="Mot de passe" formControlName="password" style="width: 500px;"></label>
+                                        
+                                      </div>
+                                      <button type="submit" class="btn" style="background-color:lavender;" (click)="verif()" > S'inscrire</button>
+                                    </form>
+                                </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -19,7 +19,8 @@ export class ModifierComponent implements OnInit {
     this.Modifier=this.lm.group({
       identifiant:[''],
       libelle:[''],
-      promotion:[false],
+      promo:false,
+      pourcentage:0,
       prix:[0],
       categorie:[''],
       ville:['']
@@ -37,6 +38,7 @@ export class ModifierComponent implements OnInit {
      else
          this.alert = "L'employé existe déjà";
    }
-
+   onVider(f:FormGroup){
+    this.Modifier.reset({identifiant:'', libelle:'',region:''});}
 
 }

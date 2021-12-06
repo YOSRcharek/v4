@@ -1,0 +1,78 @@
+.bg-dark {
+    background-color: #121921;
+}
+.py-3 {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+.container {
+    max-width: 720px;
+    width: 100%;
+    padding-right: var(--bs-gutter-x,.75rem);
+    padding-left: var(--bs-gutter-x,.75rem);
+    margin-right: auto;
+    margin-left: auto;
+    
+}
+col-md-4 {
+    flex: 0 0 auto;
+    width: 33.3333333333%;
+}
+.row {
+    --bs-gutter-x: 1.5rem;
+    --bs-gutter-y: 0;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: calc(var(--bs-gutter-y) * -1);
+    margin-right: calc(var(--bs-gutter-x)/ -2);
+    margin-left: calc(var(--bs-gutter-x)/ -2);
+}
+.font-weight-500 {
+    font-weight: 500!important;
+}
+.text-white {
+    color: #fff!important;
+}
+.fs-6 {
+    font-size: 1rem!important;
+}
+.mb-2 {
+    margin-bottom: 0.5rem!important;
+}
+.position-relative {
+    position: relative!important;
+}
+*, ::after, ::before {
+    box-sizing: border-box;
+}
+user agent stylesheet
+div {
+    display: block;
+}
+.lh-lg {
+    line-height: 2!important;
+}
+.p-0 {
+    padding: 0!important;
+}
+.list-unstyled {
+  
+    list-style: none;
+}
+dl, ol, ul {
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+
+*, ::after, ::before {
+    box-sizing: border-box;
+}
+
+ul {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 40px;
+}

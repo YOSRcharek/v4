@@ -31,13 +31,27 @@ import { MAinDrahimComponent } from './main-drahim/main-drahim.component';
 import { MTozeurComponent } from './mtozeur/mtozeur.component';
 import { PrompHotelComponent } from './promp-hotel/promp-hotel.component';
 import { ReserveComponent } from './service/reserve/reserve.component';
+import { MaisonTunisComponent } from './maison-tunis/maison-tunis.component';
+import { MaisonHammametComponent } from './maison-hammamet/maison-hammamet.component';
+import { MaisonAinDrahimComponent } from './maison-ain-drahim/maison-ain-drahim.component';
+import { MaisonTozeurComponent } from './maison-tozeur/maison-tozeur.component';
+import { MaisonDjerbaComponent } from './maison-djerba/maison-djerba.component';
+import { PayerComponent } from './payer/payer.component';
+import { AcceuilComponent } from './acceuil/acceuil.component';
+import { AdministrateurComponent } from './administrateur/administrateur.component';
+import { Utilisateur } from './utilisateur';
+import { UtilisateurComponent } from './utilisateur/utilisateur.component';
 const routes: Routes = [
+  {path:'Best-Tunisia-Travel',component:AcceuilComponent},
+  {path:'Best-Tunisia-Travel/connecter',component:AdministrateurComponent},
+  {path:'Best-Tunisia-Travel/backoffice',component:BackofficeComponent},
+  {path:'Best-Tunisia-Travel/accueil',component:UtilisateurComponent},
   {path:'home',component:HomeComponent},
-  {path:'deconnecter',component:HomeComponent},
+  {path:'deconnecter',component:AcceuilComponent},
   {path:'sejour',component:ListsejourComponent},
   {path:'contact',component:ContactComponent},
   {path:'aboutus',component:AboutusComponent},
-  {path:'connecter',component:AuthenComponent},
+  {path:'connecter',component:AcceuilComponent},
   {path:'reserve',component:ReserveComponent},
   {path:'Tunis',component:TunisComponent},
   {path:'Hammamet',component:HammametComponent},
@@ -45,25 +59,31 @@ const routes: Routes = [
   {path:'Tozeur',component:TozeurComponent},
   {path:'Djerba',component:DjerbaComponent},
   {path:'Profile',component:ProfileComponent },
-  {path:'Consulter',component:ConsulterComponent },
-  {path:'Ajouter',component:AjouterComponent },
-  {path:'Modifier',component:ModifierComponent },
-  {path:'Supprimer',component:SupprimerComponent },
-  {path:'Rechercher',component:RechercherComponent },
+  {path:'Best-Tunisia-Travel/backoffice/Consulter',component:ConsulterComponent },
+  {path:'Best-Tunisia-Travel/backoffice/Ajouter',component:AjouterComponent },
+  {path:'Best-Tunisia-Travel/backoffice/Modifier',component:ModifierComponent },
+  {path:'Best-Tunisia-Travel/backoffice/Supprimer',component:SupprimerComponent },
+  {path:'Best-Tunisia-Travel/backoffice/Rechercher',component:RechercherComponent },
   {path:'login',component:BackofficeComponent },
   {path:'search',component:SearchComponent},
+  {path:'payer',component:PayerComponent},
   {path:'Mtunis',component:MtunisComponent},
   {path:'MDjerba',component:MDjerbaComponent},
   {path:'Mhammamet',component:MHammametComponent},
   {path:'MAinDrahim',component:MAinDrahimComponent},
   {path:'MTozeur',component:MTozeurComponent},
+  {path:'MaisonTunis/:libelle', component:MaisonTunisComponent},
+  {path:'MaisonHammamet/:libelle', component:MaisonHammametComponent},
+  {path:'MaisonAinDrahim/:libelle', component:MaisonAinDrahimComponent},
+  {path:'MaisonTozeur/:libelle', component:MaisonTozeurComponent},
+  {path:'MaisonDjerba/:libelle', component:MaisonDjerbaComponent},
   {path:'promoHotel',component:PrompHotelComponent},
   {path:'HotelsTunis/:libelle', component:DetailhotelComponent},
   {path:'HotelsHammamet/:libelle', component:DetailComponent},
   {path:'HotelsAinDrahim/:libelle', component:DetailAinComponent},
   {path:'HotelsTozeur/:libelle', component:DetailTozComponent},
   {path:'HotelsDjerba/:libelle', component:DetailDjerComponent},
-  {path:'',redirectTo:'home',pathMatch:'full'},
+ { path:'',redirectTo:'Best-Tunisia-Travel',pathMatch:'full'},
    {path:'**',component:ErreurComponent}
   
 ];

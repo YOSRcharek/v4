@@ -1,28 +1,26 @@
 .active{
   font-weight: bold;
 }
-.col{
-  background: linear-gradient(to right,#ff1f8f,#d036db);
-}
+
 h1{
   text-align: center;
-  color: black;
+  color: #00327b;
 }
 .navbar-brand{
-  font-size: 40px;
-  color: rgb(168, 204, 211);
+  font-size: 30px;
+  color: #184c8f;
   font-weight: bold;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 .dropdown-toggle{
-  color: black;
+  color: #00327b;
   font-weight: bold;
   text-decoration: none;
   font-size:16px ;
   font-family: 'Times New Roman', Times, serif;
 }
 .mx-auto{
-  color: black;
+  color: #00327b;
   font-weight: bold;
   text-decoration: none;
   font-size:18px ;
@@ -30,13 +28,31 @@ h1{
 
 }
 .dropdown-menu{
-  color: black;
+  color: #00327b;
   font-weight: bold;
   text-decoration: none;
   font-size:14px ;
   font-family: 'Times New Roman', Times, serif;
 
 }
-
-
-
+.text{
+  color: #00327b;
+}.c{
+  margin-top: -20px;
+}
+.submit-btn
+{
+  color: #fff;
+  background-color: #00327b;
+ 
+   
+  width: 100%;
+  text-align: center;
+    border: 1px solid transparent;
+    padding:8px 8px;
+    font-size: 12px;
+    
+    border-radius: 10px;
+    
+    text-transform: uppercase;
+  }

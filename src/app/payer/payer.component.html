@@ -1,0 +1,99 @@
+<div class="carte">
+    <h2>Formulaire de paiement </h2>
+   <div class="row">
+      <div class="col-75">
+        <div class="container">
+          <form >
+          
+            <div class="row">
+              <div class="col-50">
+                <h3>Adresse de facturation</h3>
+                <label for="fname"><i class="fa fa-user"></i> Nom complet</label>
+                <input type="text" id="fname" name="firstname" placeholder="Yosr Charek">
+                <div *ngIf="firstname.invalid && firstname.touched" class="alert alert-danger">
+                  Le champs firstname est obligatoire
+                </div>
+                <label for="email"><i class="fa fa-envelope"></i> Email</label>
+                <input type="text" id="email" name="email" placeholder="Yosr@example.com">
+                <div *ngIf="email.invalid && email.touched" class="alert alert-danger">
+                  Le champs email est obligatoire
+                </div>
+                <label for="adr"><i class="fas fa-address-card"></i> Address</label>
+                <input type="text" id="adr" name="address" placeholder="36 rue de lion la soukra ">
+                <div *ngIf="address.invalid && address.touched" class="alert alert-danger">
+                  Le champs adresse est obligatoire
+                </div>
+                <label for="city"><i class="fa fa-institution"></i> ville</label>
+                <input type="text" id="city" name="city" placeholder="Tunis">
+                <div *ngIf="city.invalid && city.touched" class="alert alert-danger">
+                  Le champs ville est obligatoire
+                </div>
+              </div>
+
+             
+
+
+             
+              <div class="col-50">
+                <div class="icon-container">
+                    <div class="text">Paiement sécurisé</div>          
+                    <img src="assets/payer.png" >
+                  
+                </div>
+                <label for="cname">Nom sur la carte </label>
+                <input type="text" id="cname" name="cardname" placeholder="Yosr Charek">
+                <div *ngIf="cardname.invalid && cardname.touched" class="alert alert-danger">
+                  Le champs carte name est obligatoire
+                </div>
+                <label for="ccnum">Numero de la carte de credit</label>
+                <input type="text" id="ccnum" name="cardnumber" placeholder="1111-2222-3333-4444">
+                <div *ngIf="cardnumber.invalid && cardnumber.touched" class="alert alert-danger">
+                  Le champs carte mumber est obligatoire
+                </div>
+                <label for="expmonth">Mois Exp</label>
+                <input type="text" id="expmonth" name="expmonth" placeholder="Septembre">
+                <div *ngIf="expmonth.invalid && expmonth.touched" class="alert alert-danger">
+                  Le champs mois expirée est obligatoire
+                </div>
+                <div class="row">
+                  <div class="col-50">
+                    <label for="expyear">Exp Année</label>
+                    <input type="text" id="expyear" name="expyear" placeholder="2018">
+                    <div *ngIf="expyear.invalid && expyear.touched" class="alert alert-danger">
+                      Le champs annee expirée est obligatoire
+                    </div>
+                  </div>
+                  <div class="col-50">
+                    <label for="cvv">CVV</label>
+                    <input type="text" id="cvv" name="cvv" placeholder="352">
+                    <div *ngIf="cvv.invalid && cvv.touched" class="alert alert-danger">
+                      Le champs cvv est obligatoire
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+            </div>
+           
+            <input type="submit" value="Continue to checkout" class="btn">
+          </form>
+        </div>
+      </div>
+      <div class="col-25">
+        <div class="container">
+          <h4>Carte <span class="price" style="color:black"><i class="fa fa-shopping-cart"></i> <b></b></span></h4>
+          <p> Nombre de jours :<span class="price">  {{reservation[0].nbj}}  </span></p>
+          <p> Nombre d' adulte :<span class="price">  {{reservation[0].nbA}}  </span></p>
+          <p> Nombre des enfants :<span class="price"> {{reservation[0].nbE}}   </span></p>
+          <p> Nombre de chambres :<span class="price">   {{reservation[0].nbC}} </span></p>
+          <p> Prix par jour : <span class="price">   </span></p>
+          
+            <!-- <app-detailhotel PrixJ ></app-detailhotel> -->
+          
+          <hr>
+          <p>Total <span class="price" style="color:black"><b>    </b></span></p>
+        </div>
+      </div>
+    </div>
+    </div>
+    

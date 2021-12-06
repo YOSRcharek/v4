@@ -7,11 +7,17 @@ import { Sejour } from '../models/sejour';
   styleUrls: ['./mtunis.component.css']
 })
 export class MtunisComponent implements OnInit {
-  constructor(private MService:MService) { }
-  MTunis:Sejour[] = [];
+  constructor(private mService:MService) { }
+  MTunis:Sejour[]=[];
+  
 
   ngOnInit(): void {
-    this.MTunis=this.MService.mtunis();
+    this.MTunis=this.mService.mtunis();
   }
   
 }
+
+
+  
+
+

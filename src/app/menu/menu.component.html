@@ -1,91 +1,79 @@
-
-<div class="col">
-  <!-- Navbar  -->
-
-  <div class="navbar fixed-right navbar-expand-sm  ">
-    <div class="container"> 
-      <div class="navbar-header">
-
-        <a class="navbar-brand" href="/menu">OCTY</a>
-      </div>
-       <div class="container-fluid">
-          <a class="navbar-brand" href="#">
-            <img src="assets/log.PNG"  style="width:70px;" class="rounded-pill"> 
-          </a>
-        </div>
-      <a class="navbar-brand" href="#"></a>
-      <button
-        class="navbar-toggler"
-        type="button"
-        data-bs-toggle="collapse"
-        data-bs-target="#navbarNav"
-        aria-controls="navbarNav"
-        aria-expanded="false"
-        aria-label="Toggle navigation" >
-      
-      
-   
-        <span class="navbar-toggler-icon"> </span>
-      </button>
-
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <div class="mx-auto">
-        <ul class="navbar-nav">
-          <li class="nav-item">
-            <a class="nav-link text-black" routerLinkActive="active" routerLink="/home" >Home<img src="assets/home.png"></a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link text-black" routerLinkActive="active" routerLink="/aboutus" >
-              About<img src="assets/coins.png" ></a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link text-black" routerLinkActive="active" routerLink="/contact">
-              contact<img src="assets/email.png" ></a>
-          </li>
-          
-          <li class= "nav-item ">
-            <ul class="dropdown">
-              <p></p>
-              <a class="dropdown-toggle" data-toggle="dropdown"  routerLinkActive=" active " href="#"> Sejour  </a>
-              <ul class="dropdown-menu">
-                
-                <li> Hôtels</li>
-                <li><a routerLink="/Tunis"> Tunis</a></li>
-                <li><a routerLink="/Hammamet"> Hammamet</a></li>
-                <li><a routerLink="/Ain-Draham"> Ain Draham</a></li>
-                <li><a routerLink="/Tozeur"> Tozeur</a></li>
-                <li><a routerLink="/Djerba"> Djerba</a></li>
-                <li> maison d'hôtes</li>
-                <li><a routerLink="/Mtunis"> Tunis</a></li>
-                <li><a routerLink="/Mhammamet"> Hammamet</a></li>
-                <li><a routerLink="/MAinDraham"> Ain Draham</a></li>
-                <li><a routerLink="/MTozeur"> Tozeur</a></li>
-                <li><a routerLink="/MDjerba"> Djerba</a></li>
-              </ul>
+<nav class="navbar navbar-expand-sm navbar-white bg-white fixed-top">
+  <div class="container-fluid">
+    <a class="navbar-brand" routerLink="/Best-Tunisia-Travel/accueil"><img src="../../assets/logo0.png"  style="width:70px;margin-top: -10px;" class="rounded-pill"> </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="mynavbar">
+      <ul class="navbar-nav me-auto">
+        <li class="nav-item">
+          <a class="navbar-brand" >  Best Tunisia Travel</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text" routerLinkActive="active" routerLink="/Home" style="font-size: 20px;" ><i class="fas fa-home"></i>  Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text" routerLinkActive="active" routerLink="/aboutus" style="font-size: 20px;" ><i class="fas fa-info"></i> About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="javascript:void(0)"><ul class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown"  routerLinkActive=" active " href="#"><i class="fas fa-globe-africa" style="font-size: 20px;"> Sejour</i>   </a>
+            <ul class="dropdown-menu">
+              
+              <li> Hôtels</li>
+              <li><a routerLink="/Tunis"> Tunis</a></li>
+              <li><a routerLink="/Hammamet"> Hammamet</a></li>
+              <li><a routerLink="/Ain-Draham"> Ain Draham</a></li>
+              <li><a routerLink="/Tozeur"> Tozeur</a></li>
+              <li><a routerLink="/Djerba"> Djerba</a></li>
+              <li> maison d'hôtes</li>
+              <li><a routerLink="/Mtunis"> Tunis</a></li>
+              <li><a routerLink="/Mhammamet"> Hammamet</a></li>
+              <li><a routerLink="/MAinDraham"> Ain Draham</a></li>
+              <li><a routerLink="/MTozeur"> Tozeur</a></li>
+              <li><a routerLink="/MDjerba"> Djerba</a></li>
             </ul>
-            </li>
-          <li class= "nav-item ">
-          <ul class="dropdown"><p></p>
-            <a class="dropdown-toggle" data-toggle="dropdown" href="#"> OFFRE PROMO  </a>
+          </ul></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="javascript:void(0)">
+          <ul class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#"><i class="fas fa-hand-holding-usd" style="font-size: 20px;"></i> OFFRE PROMO </a>
             <ul class="dropdown-menu">
               
               <li><a href="/promoHotel"> Hotel</a></li>
               <li><a href="#"> Maison d'hôte</a></li>
               <li><a href="#"> Gratuit enfant</a></li>
             </ul>
-          </ul>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link text-black" routerLinkActive="active" routerLink="/search">  
-              <img src="assets/search.PNG" style="width:50px" ></a>
-          </li>
-        </ul>
-      
-      </div>
-      </div>
+          </ul></a>
+        </li>
+      </ul>
+      <form class="d-flex" [formGroup]="Search" (ngSubmit)="onChercher(Search.controls.libelle.value)">
+        <input class="form-control me-2" type="text" placeholder="Rechercher" formControlName="libelle" (ngModel)="nom">
+        <button class="submit-btn " type="button" (click)="onChercher(Search.controls.libelle.value)">Rechercher</button>
+      </form>
     </div>
   </div>
+</nav>
+<div class="container">
+  <div class="row">
+      <ng-container *ngFor="let t of hotel">
+         <div class="col-4">
+           <div class="card " style="width:400px;height: 400px;">
+    
+             <img class="card-img-top" [src]="t.tableau_img[0]" alt="Card image">
+        
+              <div class="card-body">
+                <h3 class="card-title">{{t.libelle|titlecase}}</h3> <span *ngFor="let n of etoile(t.nombre_etoile)"><i class="fas fa-star" style="color:gold;"></i></span><p></p>
+                <h5 class="card-text"><i class="fas fa-map-marker" style="color:paleturquoise;"></i> {{t.ville|titlecase}}</h5>
+                <p class="card-text"><i class="fas fa-coins" style="color: gold;"></i> Tarif : {{t.prix}}</p>
+                <p class="card-text" *ngIf="t.promotion">
+                  <i class="fas fa-check-circle" style="color: greenyellow;"></i> Tarif Avec Promotion : {{promo(t.prix,t.pourcentage)}}</p>
+                
+               </div>
+           </div>
+         </div>
+      </ng-container>
 
-
-
-  
+</div>
+</div>

@@ -11,10 +11,13 @@ export class PrompHotelComponent implements OnInit {
   constructor(private hotelsService:HotelsService) { }
   hotelsTunis:Sejour[] = [];
   hotelsHammamet:Sejour[] = [];
-   
+  hotelsDjerba:Sejour[]=[]; 
+  hotelsTozeur:Sejour[]=[]; 
   ngOnInit(): void {
     this.hotelsTunis=this.hotelsService.PromoHotelstunis();
     this.hotelsHammamet=this.hotelsService.PromoHotelsHammamet();
+    this.hotelsDjerba=this.hotelsService.PromoHotelsDjerba();
+    this.hotelsTozeur=this.hotelsService.PromoHotelsTozeur();
   }
   
 }

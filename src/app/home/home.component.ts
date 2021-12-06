@@ -15,7 +15,9 @@ export class HomeComponent implements OnInit {
     HotelsTunis:Sejour[] = [];
   
   constructor(public lm:FormBuilder,public User:HotelsService,private router:Router,private hotelsService:HotelsService) { }
-
+  dispo(){
+    
+  }
 
   onSubmit(){
     if((this.Utilisateur.value['username']==this.user[0])&&(this.Utilisateur.value['password']==this.user[1]))

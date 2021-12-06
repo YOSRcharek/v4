@@ -1,84 +1,62 @@
 import { Injectable } from '@angular/core';
+import { Image } from '../image';
 import { Sejour } from '../models/sejour';
 @Injectable({
   providedIn: 'root'
 })
 export class MService {
 
-  constructor() { }
-  
-  MTunis:Sejour[]=[
-    new Sejour('MB21','','Dar Ben Gasem','Tunis Ville - Tunisie','Maison d hôte','',0,false,new Date(22,11,2021),new Date(22,11,2021),5,
-    ['assets/dar ben gasem1.jpg','assets/La Maison Blanche_2.jpg','assets/La Maison Blanche_3.jpg','assets/La Maison Blanche_4.jpg'],
-    ['x','y']),
-    new Sejour('MB21','','Dar Kenza ','Tunis Ville - Tunisie','Maison d hôte','',0,false,new Date(22,11,2021),new Date(22,11,2021),5,
-    ['assets/dar kenza 1.jpg','assets/La Maison Blanche_2.jpg','assets/La Maison Blanche_3.jpg','assets/La Maison Blanche_4.jpg'],
-    ['x','y']),
-    new Sejour('MB21','','Dar Marsa Cubes','Tunis Ville - Tunisie','Maison d hôte','',0,false,new Date(22,11,2021),new Date(22,11,2021),5,
-    ['assets/dar marsa cubes1.jpg','assets/dar marsa cubes1.jpg','assets/La Maison Blanche_3.jpg','assets/La Maison Blanche_4.jpg'],
-    ['x','y']),
-    new Sejour('MB21','','Dar El Molk','Tunis Ville - Tunisie','Maison d hôte','',0,false,new Date(22,11,2021),new Date(22,11,2021),5,
-    ['assets/dar el molk1.jpg','assets/La Maison Blanche_2.jpg','assets/La Maison Blanche_3.jpg','assets/La Maison Blanche_4.jpg'],
-    ['x','y']),
-    new Sejour('MB21','','Dar Salima','Tunis Ville - Tunisie','Maison d hôte','',0,false,new Date(22,11,2021),new Date(22,11,2021),5,
-    ['assets/dar salima 1.jpg','assets/La Maison Blanche_2.jpg','assets/La Maison Blanche_3.jpg','assets/La Maison Blanche_4.jpg'],
-    ['x','y']),
-    new Sejour('MB21','','Dar Ya','Tunis Ville - Tunisie','Maison d hôte','',0,false,new Date(22,11,2021),new Date(22,11,2021),5,
-    ['assets/dar ya 1.jpg','assets/La Maison Blanche_2.jpg','assets/La Maison Blanche_3.jpg','assets/La Maison Blanche_4.jpg'],
-    ['x','y']),
-   
-  ]
- MHammamet:Sejour[]=[
-       new Sejour('SPS21','','Saphir Palace & Spa','Hammamet - Tunisie','hotel','',0,false,new Date(22,11,2021),new Date(22,11,2021),5,
-       ['assets/Saphir Palace & Spa_1.jpg','assets/Saphir Palace & Spa_2.jpg','assets/Saphir Palace & Spa_3.jpg','assets/Saphir Palace & Spa_4.jpg','assets/Saphir Palace & Spa_5.jpg',
-       'assets/Saphir Palace & Spa_6.jpg','assets/Saphir Palace & Spa_7.jpg','assets/Saphir Palace & Spa_8.jpg','assets/Saphir Palace & Spa_9.jpg',],
-       ['x','y'])
-      
-   ]
-   MAinDraham:Sejour[]=[
-     new Sejour('DIEA21','','Dar Ismail Nour El Ain','Ain Draham - Tunisie','hotel','d  d',0,false,new Date(22,11,2021),new Date(22,11,2021),4,
-     ['assets/Dar Ismail Nour El Ain_1.jpg','assets/Dar Ismail Nour El Ain_2.jpg','assets/Dar Ismail Nour El Ain_3.jpg',
-     'assets/Dar Ismail Nour El Ain_4.jpg','assets/Dar Ismail Nour El Ain_5.jpg','assets/Dar Ismail Nour El Ain_6.jpg','assets/Dar Ismail Nour El Ain_7.jpg'],
-     ['x','y'])
 
-    ]
+   private MTunis:Sejour[]=[
+    new Sejour('MB21','','Dar Ben Gasem','Tunis Ville - Tunisie','Maison d hôte','',100,false,new Date(22,11,2021),new Date(22,11,2021),5,
+    [new Image('assets/dar ben gasem1.jpg','assets/dar ben gasem2.jpg ','assets/dar ben gasem3.jpg ','assets/dar ben gasem4.jpg')] ,
+    ['x','y'],['Chambre Dar Ben Gacem'],14,[''] ,[''] ,'assets/dar ben gasem1.jpg'),
+    new Sejour('MB631','','Dar Kenza ','Tunis Ville - Tunisie','Maison d hôte','',0,false,new Date(22,11,2021),new Date(22,11,2021),5,
+    [new Image('assets/dar kenza 1.jpg','assets/dar kenza 2.jpg','assets/dar kenza 3.jpg','assets/dar kenza 4.jpg')],
+    ['x','y'],['Chambre Medina','Chambre Zitouna'],15,[''],[''],'assets/dar kenza 1.jpg'),
+    new Sejour('MB41','','Dar Marsa Cubes','Tunis Ville - Tunisie','Maison d hôte','',0,false,new Date(22,11,2021),new Date(22,11,2021),5,
+    [new Image('assets/dar marsa cubes1.jpg','assets/dar marsa cubes2.jpg','assets/dar marsa cubes3.jpg','assets/dar marsa cubes4.jpg')],
+    ['x','y'],['Chambre Musc Dar Marsa cubes','Chambre Fella Dar Marsa cubes', 'Suite Jasmin Dar Marsa cubes',' Suite Ambre Dar Marsa cubes', 'Suite Fatma Dar Marsa cubes']
+    ,18,[''],[''],'assets/dar marsa cubes1.jpg'),
+    new Sejour('MB51','','Dar El Molk','Tunis Ville - Tunisie','Maison d hôte','',0,false,new Date(22,11,2021),new Date(22,11,2021),5,
+    [new Image('assets/dar el molk1.jpg','assets/dar el molk2.jpg','assets/dar el molk3.jpg','assets/dar el molk4.jpg')],
+    ['x','y'],['Chambre / Douche','Chambre / Baignoire'],6,[''],[''],'assets/dar el molk1.jpg' ),
+    new Sejour('MB61','','Dar Salima','Tunis Ville - Tunisie','Maison d hôte','',0,false,new Date(22,11,2021),new Date(22,11,2021),5,
+    [new Image('assets/dar salima 1.jpg','assets/dar salima 2.jpg','assets/dar salima 3.jpg','assets/dar salima 4.jpg')],
+    ['x','y'],['Chambre Dar Salima vue piscine','Chambre Dar Salima salle de bain int','Chambre Dar Salima salle de bain ext'],14,[''],[''],'assets/dar salima 1.jpg'),
+    new Sejour('MB71','','Dar Ya','Tunis Ville - Tunisie','Maison d hôte','',0,false,new Date(22,11,2021),new Date(22,11,2021),5,
+    [new Image('assets/dar ya 1.jpg','assets/dar ya 2.jpg','assets/dar ya 3.jpg','assets/dar ya 4.jpg')]
+    ,['x','y'], ['Chambre Double','Chambre Single','Chambre Triple','Chambre Quadruple'],12,[''],[''],'assets/dar ya 1.jpg')];
 
- MTozeur:Sejour[]=[
-   new Sejour('ATR21','','Anantara Tozeur Resort','Tozeur - Tunisie','hotel','',0,false,new Date(22,11,2021),new Date(22,11,2021),5,
-   ['assets/Anantara Tozeur Resort_1.jpg','assets/Anantara Tozeur Resort_2.jpg','assets/Anantara Tozeur Resort_3.jpg','assets/Anantara Tozeur Resort_4.jpg','assets/Anantara Tozeur Resort_5.jpg',
-   'assets/Anantara Tozeur Resort_6.jpg','assets/Anantara Tozeur Resort_7.jpg','assets/Anantara Tozeur Resort_8.jpg',],
-   ['x','y'])
-   ]
+ 
 
- MDjerba:Sejour[]=[
-  new Sejour('HPTSD21','','Hasdrubal Prestige Thalassa & Spa Djerba','Tozeur - Tunisie','hotel','',0,false,new Date(22,11,2021),new Date(22,11,2021),5,
-  ['assets/Hasdrubal Prestige Thalassa & Spa Djerba_1.jpg','assets/Hasdrubal Prestige Thalassa & Spa Djerba_6.jpg','assets/Hasdrubal Prestige Thalassa & Spa Djerba_3.jpg','assets/Hasdrubal Prestige Thalassa & Spa Djerba_4.jpg','assets/Hasdrubal Prestige Thalassa & Spa Djerba_5.jpg',
-  'assets/Hasdrubal Prestige Thalassa & Spa Djerba_6.jpg','assets/Hasdrubal Prestige Thalassa & Spa Djerba_7.jpg','assets/Hasdrubal Prestige Thalassa & Spa Djerba_8.jpg'],
-  ['x','y'])
- ]
-
-
- mtunis(){  
+  public mtunis(){  
   return this.MTunis;
   }
 
-  mhammamet(){
-    return this.MHammamet;
-  }
+  public getMaisonByLib(libelle:string){
+    return this.MTunis.find(l=>l.libelle==libelle);
+  } 
+  
 
-  mAindraham(){
-    return this.MAinDraham;
-  }
+ 
+  // private mhammamet(){
+  //   return this.MHammamet;
+  // }
 
-  mtozeur(){
-    return this.MTozeur;
-  }
+  // private mAindraham(){
+  //   return this.MAinDraham;
+  // }
 
-  mDjerba(){
-    return this.MDjerba;
-  }
+  // private mtozeur(){
+  //   return this.MTozeur;
+  // }
 
+  // private mDjerba(){
+  //   return this.MDjerba;
+  // }
 
+  constructor() { }
 
 
 

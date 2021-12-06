@@ -18,9 +18,13 @@ export class AjouterComponent implements OnInit {
     this.Ajouter=this.lm.group({
       identifiant:[''],
       libelle:[''],
-      type:[''],
-      categorie:[''],
-      prix:[''],
+      typeH:false,
+      typeM:false,
+      promo:false,
+      prix:0,
+      pourcentage:0,
+      nombre_etoile:0,
+      tableau_img:[''],
       ville:[''],
       region:['']
     });
@@ -31,5 +35,6 @@ export class AjouterComponent implements OnInit {
     else
         this.alert = "L'employé existe déjà";
   }
-
+  onVider(f:FormGroup){
+    this.Ajouter.reset({identifiant:'', libelle:'',region:''});}
 }
