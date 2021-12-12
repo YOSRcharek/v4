@@ -1,0 +1,87 @@
+<div class="c">
+    <app-menubackoffice></app-menubackoffice>
+  <div class="container ">
+      <h1 class="h2"> Ajouter un nouveau produit touristique </h1>
+      <div class="horizontal-line-5"></div>
+          <div class="row mb-5">
+            <div class="col-md-9">
+                <form [formGroup]="Ajouter" class="contactForm fv-form fv-form-bootstrap" (ngSubmit)="onAjouter(Ajouter)"  novalidate="novalidate">
+                
+                  <div class="d-md-flex mb-3"><span class="me-md-3 align-self-center">Veuillez choisir la region de produit touristique :</span><span class="">
+                    <select formControlName="region" class="form-select  mt-3 mt-md-0" id="service-contact">
+                      <option value="Tunis">Tunis</option>
+                      <option value="Hammamet">Hammamet</option>
+                      <option value="Tozeur">Tozeur</option>
+                      <option value="Djerba">Djerba</option>
+                    </select>
+                  </span>
+                  </div>
+                  <div class="row g-3">
+                    <div class="col-md-12 col-12">
+                      <div class="form-group">
+                        <input formControlName="identifiant" type="text" class="form-control" placeholder="identifiant*" [(ngModel)]="produit.identifiant"><br>
+                      </div>
+                    </div>
+                    <div class="col-md-12 col-12">
+                      <div class="form-group">
+                        <input formControlName="libelle" type="text" class="form-control" placeholder="libelle*" [(ngModel)]="produit.libelle"><br>
+                      </div>
+                    </div>
+                    <div class="col-md-12 col-12">
+                      <div class="form-group">
+                        <input formControlName="ville" type="text" class="form-control" placeholder="ville*" [(ngModel)]="produit.ville"><br>
+                      </div>
+                    </div>
+                    <div class="col-md-12 col-12">
+                      <div class="form-group">
+                        <input formControlName="typeH" type="checkbox" [(ngModel)]="produit.type" value="hotel" class="form-check-input" > Hotel
+                      </div>
+                      <div class="form-group">
+                        <input formControlName="typeM" type="checkbox" [(ngModel)]="produit.type" value="hotel" class="form-check-input" > Maison d'hote
+                      </div>
+                    </div>
+                    <div class="col-md-12 col-12">
+                      <div class="form-group">
+                        <input formControlName="prix" type="number" name="firstName" class="form-control" placeholder="prix*" [(ngModel)]="produit.prix">
+                      </div>
+                    </div>
+                    <div class="col-md-4 col-12">
+                      <div class="form-group">
+                        En Promotion <input formControlName="promo" [(ngModel)]="produit.promotion" type="checkbox" value="hotel" class="form-check-input" >
+                      </div>
+                      <ng-container *ngIf="produit.promotion">
+                        <input formControlName="pourcentage" type="number" class="form-control" placeholder="pourcentage*" [(ngModel)]="produit.pourcentage"><br>
+                      </ng-container>
+                    </div>
+                    <div class="col-md-12 col-12">
+                      <div class="form-group">
+                        <input formControlName="nombre_etoile" type="number" class="form-control" placeholder="Nombre d'toile*" [(ngModel)]="produit.nombre_etoile">
+                      </div>
+                    </div>
+                    <!-- <div class="col-md-12 col-12">
+                      <div class="form-group">
+                        <input formControlName="tableau_img" type="text" class="form-control" placeholder="Image*" [(ngModel)]="produit.tableau_img"><br>
+                      </div>
+                    </div> -->
+                    <!-- <div class="col-sm-4 col-sm-offset-1">
+                      <div class="picture-container">
+                           <div class="picture">
+                               <input type="file" formControlName="tableau_img" [(ngModel)]="produit.tableau_img[0]">
+                           </div>
+                           <h6>Choisir une image</h6>
+                       </div>
+                   </div> -->
+                    <div class="col-md-12 text-end">
+                      <button type="submit" class="btn btn-primary">Ajouter</button>
+                    </div>
+                    <div class="col-md-8 text-end">
+                      <button type="reset" class="btn btn-primary" (click)="onVider(Ajouter)">Vider</button>
+                    </div>
+  </div>
+  </form>
+            </div>
+          </div>
+  </div>
+  </div>
+  {{produit|json}}
+  

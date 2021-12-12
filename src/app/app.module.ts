@@ -48,6 +48,10 @@ import { PayerComponent } from './payer/payer.component';
 import { AcceuilComponent } from './acceuil/acceuil.component';
 import { AdministrateurComponent } from './administrateur/administrateur.component';
 import { UtilisateurComponent } from './utilisateur/utilisateur.component';
+import { ConsulterMComponent } from './consulter-m/consulter-m.component';
+import { AjouterMComponent } from './ajouter-m/ajouter-m.component';
+import { SupprimerMComponent } from './supprimer-m/supprimer-m.component';
+import { ModifierMComponent } from './modifier-m/modifier-m.component';
 
 @NgModule({
   declarations: [
@@ -96,7 +100,11 @@ import { UtilisateurComponent } from './utilisateur/utilisateur.component';
     PayerComponent,
     AcceuilComponent,
     AdministrateurComponent,
-    UtilisateurComponent
+    UtilisateurComponent,
+    ConsulterMComponent,
+    AjouterMComponent,
+    SupprimerMComponent,
+    ModifierMComponent
   ],
   imports: [
     BrowserModule,

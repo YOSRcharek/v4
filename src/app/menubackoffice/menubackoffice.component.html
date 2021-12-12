@@ -1,5 +1,5 @@
 <br><br><br><br>
-  <nav class="navbar navbar-expand-sm navbar-dark bg-dark fixed-top">
+  <nav class="navbar navbar-expand-sm navbar-dark bg-dark ">
     <div class="container-fluid">
       <a class="navbar-brand" routerLink="Profile">Profile</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
@@ -8,16 +8,47 @@
       <div class="collapse navbar-collapse" id="mynavbar">
         <ul class="navbar-nav me-auto">
           <li class="nav-item">
-            <a class="nav-link" routerLink="/Best-Tunisia-Travel/backoffice/Consulter">Consulter</a>
+            <a class="nav-link" href="">
+            <ul class="dropdown">
+              <a class="dropdown-toggle" data-toggle="dropdown" href="#">Consulter </a>
+              <ul class="dropdown-menu">
+                <li><a routerLink="/Best-Tunisia-Travel/backoffice/Consulter"> Hotel</a></li>
+                <li><a routerLink="Consulter"> Maison d'hôte</a></li>
+              </ul>
+            </ul></a>
           </li>
+          
           <li class="nav-item">
-            <a class="nav-link" routerLink="/Best-Tunisia-Travel/backoffice/Ajouter">Ajouter</a>
+            <a class="nav-link" href="">
+            <ul class="dropdown">
+              <a class="dropdown-toggle" data-toggle="dropdown" href="#">Ajouter</a>
+              <ul class="dropdown-menu">
+                <li><a routerLink="/Best-Tunisia-Travel/backoffice/Ajouter"> Hotel</a></li>
+                <li><a routerLink="/Best-Tunisia-Travel/backoffice/AjouterM"> Maison d'hôte</a></li>
+              </ul>
+            </ul></a>
           </li>
+
           <li class="nav-item">
-            <a class="nav-link" routerLink="/Best-Tunisia-Travel/backoffice/Modifier">Modifier</a>
+            <a class="nav-link" href="">
+            <ul class="dropdown">
+              <a class="dropdown-toggle" data-toggle="dropdown" href="#">Modifier </a>
+              <ul class="dropdown-menu">
+                <li><a routerLink="/Best-Tunisia-Travel/backoffice/Modifier"> Hotel</a></li>
+                <li><a routerLink="/Best-Tunisia-Travel/backoffice/ModifierM"> Maison d'hôte</a></li>
+              </ul>
+            </ul></a>
           </li>
+
           <li class="nav-item">
-            <a class="nav-link" routerLink="/Best-Tunisia-Travel/backoffice/Supprimer">Supprimer</a>
+            <a class="nav-link" href="">
+            <ul class="dropdown">
+              <a class="dropdown-toggle" data-toggle="dropdown" href="#">Supprimer</a>
+              <ul class="dropdown-menu">
+                <li><a routerLink="/Best-Tunisia-Travel/backoffice/Supprimer"> Hotel</a></li>
+                <li><a routerLink="/Best-Tunisia-Travel/backoffice/SupprimerM"> Maison d'hôte</a></li>
+              </ul>
+            </ul></a>
           </li>
           <li class="nav-item">
             <a class="nav-link" routerLink="/Best-Tunisia-Travel">Se Déconnecter</a>

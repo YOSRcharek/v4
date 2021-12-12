@@ -8,3 +8,8 @@ img{width: 60px;height: 60px;}
     text-align : right ;
     float: right;
   }
+  #image{background-image :url(/assets/passport.2png.PNG);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 753px;
+  }

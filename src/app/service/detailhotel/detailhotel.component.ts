@@ -13,15 +13,22 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 export class DetailhotelComponent implements OnInit {
   @Input() img :Image= new Image();
   HotelsTunis: Sejour;
+  HotelForm:FormGroup;
   recommander(i:number){
     return this.HotelsTunis[i].avis++;
    }
    res:Reservation;
-  
+    prix(){
+     
+    } 
+    onSubmitForm(){
+      console.log(this.HotelForm.value);
+      console.log(this.HotelForm.get('NombreCh')?.value);
+    }
     Ajouter(){
      this.hotelsService.ajouter(this.res);
     }
-   HotelForm:FormGroup;
+   
   constructor(  private activatedRoute:ActivatedRoute,private hotelsService:HotelsService, private fb:FormBuilder) { }
   
   ngOnInit(): void {
@@ -40,7 +47,7 @@ export class DetailhotelComponent implements OnInit {
     });
 }
 reserver(){
-  console.log(this.HotelForm.value);
+  
 }
 get NombreCh(){
   return this.HotelForm.controls.NombreCh;

@@ -52,31 +52,31 @@
             <div class="container">
             <div class="row">
             <div class="booking-form">
-            <form [formGroup]="HotelForm" (ngSubmit)="reserver()">
+            <form [formGroup]="HotelForm" (ngSubmit)="onSubmitForm()">
             <div class="col-md-8">
             <div class="form-group">
               <span class="form-label">chambres</span>
-              <input class="form-control" type="number"  placeholder="Nombre chambres" formControlName="NombreCh">
+              <input class="form-control" type="number"  placeholder="Nombre chambres" formControlName="NombreCh" required="">
               <div *ngIf="NombreCh.invalid && NombreCh.touched" class="alert alert-danger">
                 Le nombres de chambres est obligatoire
               </div>
             <div class="form-group">
               <span class="form-label">Adulte</span>
-              <input class="form-control" type="number" placeholder="Nombre Adultes"formControlName="NombreA">
+              <input class="form-control" type="number" placeholder="Nombre Adultes"formControlName="NombreA" required="">
               <div *ngIf="NombreA.invalid && NombreA.touched" class="alert alert-danger">
                 Le nombres d' adulte est obligatoire
                 </div>
             </div>
             <div class="form-group">
               <span class="form-label">Enfants</span>
-              <input class="form-control" type="number" placeholder="Nombre Enfants" formControlName="NombreE">
+              <input class="form-control" type="number" placeholder="Nombre Enfants" formControlName="NombreE" required="">
               <div *ngIf="NombreE.invalid && NombreE.touched" class="alert alert-danger">
                 Le nombres des enfants est obligatoire
                 </div>
             </div>
             <div class="form-group"> 
               <span class="form-label">Date depart</span>
-              <input class="form-control"  type="date" formControlName="DateDep">
+              <input class="form-control"  type="date" formControlName="DateDep" required="">
               <div *ngIf="DateDep.invalid && DateDep.touched" class="alert alert-danger">
                 La date de départ est obligatoire
                 </div> 
@@ -84,14 +84,14 @@
 
              <div class="form-group">
               <span class="form-label">Date Arriver</span>
-            <input class="form-control"  type="date" formControlName="DateAr">
+            <input class="form-control"  type="date" formControlName="DateAr" required="">
             <div *ngIf="DateAr.invalid && DateAr.touched" class="alert alert-danger">
               La date d'arriver est obligatoire
               </div>  
           </div>
             <div class="form-btn ">
              
-              <input type="submit" class="submit-btn" [disabled]="HotelForm.invalid" (click)="Ajouter()" value="Payer" routerLink="/payer">
+              <input type="submit" class="submit-btn"  (click)="Ajouter()" value="Payer" routerLink="/payer">
                 
               </div>
             </div>

@@ -214,8 +214,8 @@ private promoHotelsTunis:Sejour[]=[
   new Sejour('MB41','','Dar Marsa Cubes','Tunis Ville - Tunisie','Maison d hôte','',70,false,new Date(22,11,2021),new Date(22,11,2021),5,
   [new Image('assets/dar marsa cubes1.jpg','assets/dar marsa cubes2.jpg','assets/dar marsa cubes3.jpg','assets/dar marsa cubes4.jpg')],
   ['x','y'],['Chambre Musc Dar Marsa cubes','Chambre Fella Dar Marsa cubes', 'Suite Jasmin Dar Marsa cubes',' Suite Ambre Dar Marsa cubes', 'Suite Fatma Dar Marsa cubes']
-  ,18,['assets/climatiseur.png','assets/cafe.png','assets/ascenceur.png','assets/restaurant.png','assets/bar.png','assets/piscine.png','assets/garderieEnfant.png'],
-  ['climatiseur','café','Ascenceur','Restaurant','Bar','Piscine','Garderie enfant'],'assets/dar marsa cubes1.jpg'),
+  ,18,['assets/climatiseur.png','assets/cafe.png','assets/ascenceur.png','assets/restaurant.png','assets/bar.png','assets/piscine.png'],
+  ['climatiseur','café','Ascenceur','Restaurant','Bar','Piscine'],'assets/dar marsa cubes1.jpg'),
   new Sejour('MB51','','Dar El Molk','Tunis Ville - Tunisie','Maison d hôte','',45,false,new Date(22,11,2021),new Date(22,11,2021),5,
   [new Image('assets/dar el molk1.jpg','assets/dar el molk2.jpg','assets/dar el molk3.jpg','assets/dar el molk4.jpg')],
   ['x','y'],['Chambre / Douche','Chambre / Baignoire'],6,['assets/cafe.png','assets/ascenceur.png','assets/restaurant.png','assets/bar.png','assets/piscine.png'],['café','Ascenceur','Restaurant','Bar','Piscine'],'assets/dar el molk1.jpg' ),
@@ -225,46 +225,70 @@ private promoHotelsTunis:Sejour[]=[
   
   new Sejour('MB71','','Dar Ya','Tunis Ville - Tunisie','Maison d hôte','',70,false,new Date(22,11,2021),new Date(22,11,2021),5,
   [new Image('assets/dar ya 1.jpg','assets/dar ya 2.jpg','assets/dar ya 3.jpg','assets/dar ya 4.jpg')]
-  ,['x','y'], ['Chambre Double','Chambre Single','Chambre Triple','Chambre Quadruple'],62,['assets/climatiseur.png','assets/cafe.png','assets/ascenceur.png','assets/restaurant.png','assets/bar.png','assets/piscine.png','assets/garderieEnfant.png'],
-  ['climatiseur','café','Ascenceur','Restaurant','Bar','Piscine','Garderie enfant'],'assets/dar ya 1.jpg')];
+  ,['x','y'], ['Chambre Double','Chambre Single','Chambre Triple','Chambre Quadruple'],12,['assets/climatiseur.png','assets/cafe.png','assets/ascenceur.png','assets/restaurant.png','assets/bar.png','assets/piscine.png'],
+  ['climatiseur','café','Ascenceur','Restaurant','Bar','Piscine'],'assets/dar ya 1.jpg')];
 
   mHammamet:Sejour[]=[
    new Sejour('MB71','','Muses Hammamet','Hammamet - Tunisie','Maison d hôte','',90,false,new Date(22,11,2021),new Date(22,11,2021),5,
    [new Image('assets/muses hammamet1.jpg','assets/muses hammamet2.jpg','assets/muses hammamet3.jpg','assets/muses hammamet4.jpg')],['x','y']
-    ,['Suite Junior Erato','Suite Junior Thalia','Chambre Double Clio','Chambre Double Calliope','Chambre Supérieur Euterpe'],150
-    ,['assets/climatiseur.png','assets/cafe.png','assets/ascenceur.png','assets/restaurant.png','assets/bar.png','assets/piscine.png','assets/garderieEnfant.png'],
-    ['climatiseur','café','Ascenceur','Restaurant','Bar','Piscine','Garderie enfant'],'assets/muses hammamet1.jpg'),
+    ,['Suite Junior Erato','Suite Junior Thalia','Chambre Double Clio','Chambre Double Calliope','Chambre Supérieur Euterpe'],10
+    ,['assets/climatiseur.png','assets/cafe.png','assets/ascenceur.png','assets/restaurant.png','assets/bar.png','assets/piscine.png'],
+    ['climatiseur','café','Ascenceur','Restaurant','Bar','Piscine'],'assets/muses hammamet1.jpg'),
     new Sejour('MB71','','La maison du Golf','Hammamet - Tunisie','Maison d hôte','',120,false,new Date(22,11,2021),new Date(22,11,2021),5,
     [new Image('assets/maisonGolf 1.jpg','assets/maisonGolf 2.jpg','assets/maisonGolf 3.jpg','assets/maisonGolf 4.jpg')],['x','y']
-     ,['Chambre Double La Maison Du Golf' ,'Suite Jacuzzi privé La Maison Du Golf','Suite Mini Appart La Maison Du Golf','Suite Junior La Maison du golf','Très grande suite La Maison du Golf'],150
-     ,['assets/climatiseur.png','assets/cafe.png','assets/ascenceur.png','assets/restaurant.png','assets/bar.png','assets/piscine.png','assets/garderieEnfant.png'],
-     ['climatiseur','café','Ascenceur','Restaurant','Bar','Piscine','Garderie enfant'],'assets/maisonGolf 1.jpg')
+     ,['Chambre Double La Maison Du Golf' ,'Suite Jacuzzi privé La Maison Du Golf','Suite Mini Appart La Maison Du Golf','Suite Junior La Maison du golf','Très grande suite La Maison du Golf'],14
+     ,['assets/climatiseur.png','assets/cafe.png','assets/ascenceur.png','assets/restaurant.png','assets/bar.png','assets/piscine.png'],
+     ['climatiseur','café','Ascenceur','Restaurant','Bar','Piscine'],'assets/maisonGolf 1.jpg')
   ];
   mtozeur:Sejour[]=[
-    new Sejour('MB71','','Muses Hammamet','Hammamet - Tunisie','Maison d hôte','',90,false,new Date(22,11,2021),new Date(22,11,2021),5,
-    [new Image('assets/muses hammamet1.jpg','assets/muses hammamet2.jpg','assets/muses hammamet3.jpg','assets/muses hammamet4.jpg')],['x','y']
-     ,['Suite Junior Erato','Suite Junior Thalia','Chambre Double Clio','Chambre Double Calliope','Chambre Supérieur Euterpe'],150
-     ,['assets/climatiseur.png','assets/cafe.png','assets/ascenceur.png','assets/restaurant.png','assets/bar.png','assets/piscine.png','assets/garderieEnfant.png'],
-     ['climatiseur','café','Ascenceur','Restaurant','Bar','Piscine','Garderie enfant'],'assets/muses hammamet1.jpg'),
-     new Sejour('MB72','','La maison du Golf','Hammamet - Tunisie','Maison d hôte','',120,false,new Date(22,11,2021),new Date(22,11,2021),5,
-     [new Image('assets/maisonGolf 1.jpg','assets/maisonGolf 2.jpg','assets/maisonGolf 3.jpg','assets/maisonGolf 4.jpg')],['x','y']
-      ,['Chambre Double La Maison Du Golf' ,'Suite Jacuzzi privé La Maison Du Golf','Suite Mini Appart La Maison Du Golf','Suite Junior La Maison du golf','Très grande suite La Maison du Golf'],150
-      ,['assets/climatiseur.png','assets/cafe.png','assets/ascenceur.png','assets/restaurant.png','assets/bar.png','assets/piscine.png','assets/garderieEnfant.png'],
-      ['climatiseur','café','Ascenceur','Restaurant','Bar','Piscine','Garderie enfant'],'assets/maisonGolf 1.jpg')
-
-
+    new Sejour('MB71','','Dar Tozeur','Tozeur - Tunisie','Maison d hôte','',95,false,new Date(22,11,2021),new Date(22,11,2021),5,
+    [new Image('assets/dar tozeur 1.jpg','assets/dar tozeur 2.jpg','assets/dar tozeur 3.jpg','assets/dar tozeur 4.jpg')],['x','y']
+     ,['Suite Acajou / Suite Jardin','Suite Corail / Suite Safran','Suite Ebene / Suite Ivoire','Suite Emir'],15
+     ,['assets/climatiseur.png','assets/cafe.png','assets/restaurant.png','assets/bar.png','assets/piscine.png'],
+     ['climatiseur','café','Restaurant','Bar','Piscine'],'assets/dar tozeur 1.jpg'),
+     
+     new Sejour('MB71','','Dar Saida Baya','Tozeur - Tunisie','Maison d hôte','',95,false,new Date(22,11,2021),new Date(22,11,2021),5,
+     [new Image('assets/dar saida baya 1.jpg','assets/dar saida baya 2.jpg','assets/dar saida baya 3.jpg','assets/dar saida baya 4.jpg')],['x','y']
+      ,['Chambre Deluxe','Chambre supérieure', 'Suite Familiale'],16
+      ,['assets/climatiseur.png','assets/cafe.png','assets/restaurant.png','assets/bar.png','assets/piscine.png'],
+      ['climatiseur','café','Restaurant','Bar','Piscine'],'assets/dar saida baya 1.jpg'),
+     
+      new Sejour('MB71','','Dar Nejma','Tozeur - Tunisie','Maison d hôte','',95,false,new Date(22,11,2021),new Date(22,11,2021),5,
+      [new Image('assets/dar nejma 1.jpg','assets/dar nejma 2.jpg','assets/dar nejma 3.jpg','assets/dar nejma 4.jpg')],['x','y']
+       ,['Suite Acajou / Suite Jardin','Suite Corail / Suite Safran','Suite Ebene / Suite Ivoire','Suite Emir'],17
+       ,['assets/climatiseur.png','assets/cafe.png','assets/restaurant.png','assets/bar.png','assets/piscine.png'],
+       ['climatiseur','café','Restaurant','Bar','Piscine'],'assets/dar nejma 1.jpg'),
+       
   ];
   mdjerba:Sejour[]=[
     new Sejour('MB81','','Dar Michele','Djerba - Tunisie','Maison d hôte','',90,false,new Date(22,11,2021),new Date(22,11,2021),5,
     [new Image('assets/dar michele 1.jpg','assets/dar michele 2jpg.jpg','assets/dar michele 3.jpg','assets/dar michele 4.jpg')],['x','y']
-     ,['Suite Anguiran','Suite Amandine'],15  ,['assets/climatiseur.png','assets/cafe.png','assets/ascenceur.png','assets/restaurant.png','assets/bar.png','assets/piscine.png','assets/garderieEnfant.png'],
-     ['climatiseur','café','Ascenceur','Restaurant','Bar','Piscine','Garderie enfant'],'assets/dar michele 1.jpg'),
+     ,['Suite Anguiran','Suite Amandine'],15  ,['assets/climatiseur.png','assets/cafe.png','assets/ascenceur.png','assets/restaurant.png','assets/bar.png','assets/piscine.png'],
+     ['climatiseur','café','Ascenceur','Restaurant','Bar','Piscine'],'assets/dar michele 1.jpg'),
 
-     new Sejour('MB82','','La maison du Golf','Djerba - Tunisie','Maison d hôte','',120,false,new Date(22,11,2021),new Date(22,11,2021),5,
-     [new Image('assets/maisonGolf 1.jpg','assets/maisonGolf 2.jpg','assets/maisonGolf 3.jpg','assets/maisonGolf 4.jpg')],['x','y']
-      ,['Chambre Double La Maison Du Golf' ,'Suite Jacuzzi privé La Maison Du Golf','Suite Mini Appart La Maison Du Golf','Suite Junior La Maison du golf','Très grande suite La Maison du Golf'],150
-      ,['assets/climatiseur.png','assets/cafe.png','assets/ascenceur.png','assets/restaurant.png','assets/bar.png','assets/piscine.png','assets/garderieEnfant.png'],
-      ['climatiseur','café','Ascenceur','Restaurant','Bar','Piscine','Garderie enfant'],'assets/maisonGolf 1.jpg')
+     new Sejour('MB82','','Dar El Bidha','Djerba - Tunisie','Maison d hôte','',120,false,new Date(22,11,2021),new Date(22,11,2021),5,
+     [new Image('assets/dar el bidha 1.jpg','assets/dar el bidha 2.jpg','assets/dar el bidha 3.jpg','assets/dar el bidha 4.jpg')],['x','y']
+      ,['Chambre Double','Chambre Single','Chambre Triple','Chambre Quadriole'],11
+    ,['assets/climatiseur.png','assets/cafe.png','assets/restaurant.png','assets/bar.png','assets/piscine.png',],
+      ['climatiseur','café','Restaurant','Bar','Piscine'],'assets/dar el bidha 1.jpg'),
+
+      new Sejour('MB82','','Dar Chikh Yahia','Djerba - Tunisie','Maison d hôte','',110,false,new Date(22,11,2021),new Date(22,11,2021),5,
+      [new Image('assets/dar chikha yahia 1.jpg','assets/dar chikha yahia 2.jpg','assets/dar chikha yahia 3.jpg','assets/dar chikha yahia 4.jpg')],['x','y']
+       ,['Chambre Double'],19,['assets/climatiseur.png','assets/cafe.png','assets/restaurant.png','assets/bar.png','assets/piscine.png'],
+       ['climatiseur','café','Restaurant','Bar','Piscine'],'assets/dar chikha yahia 1.jpg'),
+
+       new Sejour('MB82','','Menzel Caja','Djerba - Tunisie','Maison d hôte','',200,false,new Date(22,11,2021),new Date(22,11,2021),5,
+       [new Image('assets/menzel caja 1.jpg','assets/menzel caja 2.jpg','assets/menzel caja 3.jpg','assets/menzel caja 4.jpg')],['x','y']
+        ,['chambre Dble MC en DP','chambre Dble MC en LPD','chambre Dble MC en PC','chambre Single MC en DP' , 'chambre Single MC en LPD', 'chambre Single MC en PC'],15
+      ,['assets/climatiseur.png','assets/cafe.png',,'assets/restaurant.png','assets/bar.png','assets/piscine.png'],
+        ['climatiseur','café','Restaurant','Bar','Piscine',],'assets/menzel caja 1.jpg'),
+        
+        
+        new Sejour('MB82','','Dar Bibine','Djerba - Tunisie','Maison d hôte','',180,false,new Date(22,11,2021),new Date(22,11,2021),5,
+        [new Image('assets/dar bibine 1.jpg','assets/dar bibine 2.jpg','assets/dar bibine 3.jpg','assets/dar bibine 4.jpg')],['x','y']
+         ,['Chambre Double avec bain Dar bibine',  'Chambre Double avec Jacuzzi Dar bibine', 'Chambre Double Dar bibine', 'Chambre Familiale Quadruple Dar bibine',' Chambre Familiale Triple Dar bibine',' Chambre Single avec bain Dar bibine','Chambre Single avec Jacuzzi Dar bibine','Chambre Single Dar bibine'],10
+       ,['assets/climatiseur.png','assets/cafe.png','assets/restaurant.png','assets/bar.png','assets/piscine.png'],
+         ['climatiseur','café','Restaurant','Bar','Piscine'],'assets/dar bibine 1.jpg'),
 
   ];
 
@@ -372,6 +396,17 @@ private promoHotelsTunis:Sejour[]=[
       }
       return false;
     }
+
+    addNewMais(mais:Sejour): boolean {
+      let m:Sejour = Object.assign({}, mais);
+      if (!this.existemais(m.identifiant)) {    
+        this.mTunis.push(m);
+        return true;
+      }
+      return false;
+    }
+
+
     Upphotel(hot:Sejour): boolean {
       let h:Sejour = Object.assign({}, hot);
       let hotel:Sejour[]=[];
@@ -391,9 +426,37 @@ private promoHotelsTunis:Sejour[]=[
       {
         return false;}
     }
+
+    Uppmais(mais:Sejour): boolean {
+      let m:Sejour = Object.assign({}, mais);
+      let maison:Sejour[]=[];
+      if (this.existemais(m.identifiant)) {  
+        maison=this.thisHotel(m.ville);
+        for (let i = 0; i < maison.length; i++) {
+          if(maison[i].identifiant==m.identifiant){
+            maison[i].promotion=m.promotion;
+            maison[i].pourcentage=m.pourcentage;
+            maison[i].prix=m.prix;
+            maison[i].libelle=m.libelle;
+            return true;
+          }
+          
+        }
+      }
+      {
+        return false;}
+    }
+
+
    public existehotel(x:string):boolean{
     return this.HotelsTunis.find(h=>h.identifiant==x) != undefined;
    }
+   public existemais(x:string):boolean{
+    return this.mTunis.find(h=>h.identifiant==x) != undefined;
+   }
+
+
+
    thisHotel(ch:string){
     if(ch=='Tunis')
     {return this.HotelsTunis;}
@@ -412,6 +475,25 @@ private promoHotelsTunis:Sejour[]=[
     else
     return [];
    }
+
+   thismais(ch:string){
+    if(ch=='Tunis')
+    {return this.mTunis;}
+    else
+    if(ch=='Hammamet')
+    {return this.mHammamet;}
+    else
+    if(ch=='Tozeur')
+    {return this.mtozeur;}
+    else
+    if(ch=='Djerba')
+    {return this.mdjerba;}
+    else
+    return [];
+   }
+
+
+
    recherche(ch:string){
     let tunis:Sejour[]=[];
     let hammamet:Sejour[]=[];
@@ -449,6 +531,41 @@ private promoHotelsTunis:Sejour[]=[
             return hotel;
          }
      }
+
+     rechercheM(ch:string){
+      let Mtunis:Sejour[]=[];
+      let Mhammamet:Sejour[]=[];
+      let MAtozeur:Sejour[]=[];
+      let MAdjerba:Sejour[]=[];
+      let maison:Sejour[]=[];
+         
+         if(isNaN(Number(ch)))
+         {
+           Mtunis=this.mTunis.filter(lib=>lib.ville==ch);
+           for (let i=0;i<Mtunis.length;i++) {maison.push(Mtunis[i]);}
+           Mhammamet=this.mHammamet.filter(lib=>lib.ville==ch);
+           for (let i=0;i<Mhammamet.length;i++) {maison.push(Mhammamet[i]);}
+           MAtozeur=this.mtozeur.filter(lib=>lib.ville==ch);
+           for (let i=0;i<MAtozeur.length;i++) {maison.push(MAtozeur[i]);}
+           MAdjerba=this.mdjerba.filter(lib=>lib.ville==ch); 
+           for (let i=0;i<MAdjerba.length;i++) {maison.push(MAdjerba[i]);}
+              return maison;
+         }
+         else 
+            {
+              Mtunis=this.mTunis.filter(lib=>lib.prix==Number(ch));
+              for (let i=0;i<Mtunis.length;i++) {maison.push(Mtunis[i]);}
+              Mhammamet=this.mHammamet.filter(lib=>lib.prix==Number(ch));
+              for (let i=0;i<Mhammamet.length;i++) {maison.push(Mhammamet[i]);}
+              MAtozeur=this.mtozeur.filter(lib=>lib.prix==Number(ch));
+              for (let i=0;i<MAtozeur.length;i++) {maison.push(MAtozeur[i]);}
+              MAdjerba=this.mdjerba.filter(lib=>lib.prix==Number(ch));
+              for (let i=0;i<MAdjerba.length;i++) {maison.push(MAdjerba[i]);}
+              return maison;
+           }
+       }
+  
+
      exist(id:string,lib:string,c:string):Boolean{
       let hotel=this.thisHotel(c);
       for (let i = 0; i < hotel.length; i++){
@@ -459,5 +576,20 @@ private promoHotelsTunis:Sejour[]=[
 
       return false;
     }
+
+    existM(id:string,lib:string,c:string):Boolean{
+      let maison=this.thismais(c);
+      for (let i = 0; i < maison.length; i++){
+        if(maison[i].identifiant==id && maison[i].libelle==lib)
+        {maison.splice(i,1);
+        return true;}
+      }
+
+      return false;
+    }
+
+
+
+
      constructor() { }
 }

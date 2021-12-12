@@ -41,6 +41,10 @@ import { AcceuilComponent } from './acceuil/acceuil.component';
 import { AdministrateurComponent } from './administrateur/administrateur.component';
 import { Utilisateur } from './utilisateur';
 import { UtilisateurComponent } from './utilisateur/utilisateur.component';
+import { SupprimerMComponent } from './supprimer-m/supprimer-m.component';
+import { ModifierMComponent } from './modifier-m/modifier-m.component';
+import { AjouterMComponent } from './ajouter-m/ajouter-m.component';
+import { ConsulterMComponent } from './consulter-m/consulter-m.component';
 const routes: Routes = [
   {path:'Best-Tunisia-Travel',component:AcceuilComponent},
   {path:'Best-Tunisia-Travel/connecter',component:AdministrateurComponent},
@@ -64,6 +68,10 @@ const routes: Routes = [
   {path:'Best-Tunisia-Travel/backoffice/Modifier',component:ModifierComponent },
   {path:'Best-Tunisia-Travel/backoffice/Supprimer',component:SupprimerComponent },
   {path:'Best-Tunisia-Travel/backoffice/Rechercher',component:RechercherComponent },
+  {path:'Best-Tunisia-Travel/backoffice/ConsulterM',component:ConsulterMComponent },
+  {path:'Best-Tunisia-Travel/backoffice/AjouterM',component:AjouterMComponent },
+  {path:'Best-Tunisia-Travel/backoffice/ModifierM',component:ModifierMComponent },
+  {path:'Best-Tunisia-Travel/backoffice/SupprimerM',component:SupprimerMComponent },
   {path:'login',component:BackofficeComponent },
   {path:'search',component:SearchComponent},
   {path:'payer',component:PayerComponent},
@@ -83,7 +91,7 @@ const routes: Routes = [
   {path:'HotelsAinDrahim/:libelle', component:DetailAinComponent},
   {path:'HotelsTozeur/:libelle', component:DetailTozComponent},
   {path:'HotelsDjerba/:libelle', component:DetailDjerComponent},
- { path:'',redirectTo:'home',pathMatch:'full'},
+ { path:'',redirectTo:'Best-Tunisia-Travel',pathMatch:'full'},
    {path:'**',component:ErreurComponent}
   
 ];
